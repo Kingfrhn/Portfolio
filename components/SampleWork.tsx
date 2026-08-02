@@ -157,13 +157,13 @@ export default function SampleWork() {
               className={`sample-tab-btn ${panel === 'scenarios' ? 'active' : ''}`}
               onClick={() => setPanel('scenarios')}
             >
-              Test Scenarios Suite
+              Sample test cases
             </button>
             <button
               className={`sample-tab-btn ${panel === 'bugs' ? 'active' : ''}`}
               onClick={() => setPanel('bugs')}
             >
-              Logged Jira Defect Reports ({activeBugs.length})
+              Sample bugs
             </button>
           </div>
 
@@ -507,28 +507,24 @@ export default function SampleWork() {
                   </p>
                 </div>
 
-                {selectedBug.logSnippet && (
-                  <div>
-                    <div className="label" style={{ color: 'var(--accent)' }}>
-                      ATTACHED LOGCAT / CRASH DUMP TRACE
-                    </div>
-                    <div
-                      style={{
-                        background: '#090c10',
-                        border: '1px solid var(--border)',
-                        padding: '12px',
-                        borderRadius: '6px',
-                        fontFamily: 'var(--font-mono)',
-                        fontSize: '12px',
-                        color: 'var(--bug)',
-                        marginTop: '6px',
-                        overflowX: 'auto',
-                      }}
-                    >
-                      {selectedBug.logSnippet}
-                    </div>
+                <div>
+                  <div className="label" style={{ color: 'var(--accent)' }}>
+                    ATTACHMENTS
                   </div>
-                )}
+                  <div
+                    style={{
+                      background: '#090c10',
+                      border: '1px solid var(--border)',
+                      padding: '12px',
+                      borderRadius: '6px',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '12px',
+                      color: 'var(--text-faint)',
+                      marginTop: '6px',
+                      minHeight: '38px',
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
