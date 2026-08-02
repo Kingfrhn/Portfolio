@@ -8,7 +8,7 @@ export default function Contact() {
       <section id="contact" className="contact-section">
         <div className="wrap">
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
-            Status: Serving Notice Period • Available Immediately
+            Status: Serving Notice Period • Available soon ...
           </div>
 
           <h2>Let's Ship High-Quality, Stable Builds Together</h2>

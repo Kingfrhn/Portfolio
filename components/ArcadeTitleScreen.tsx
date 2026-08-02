@@ -24,7 +24,7 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
       <div className="arcade-cabinet-frame">
         <div className="arcade-header-marquee">
           <Sparkles className="arcade-star" size={18} />
-          <span>OMAR QA MASTER '99</span>
+          <span>Omar the QA</span>
           <Sparkles className="arcade-star" size={18} />
         </div>
 
@@ -75,7 +75,7 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
                 </div>
                 <div className="char-stat-item">
                   <span className="label">STATUS:</span>
-                  <span className="val" style={{ color: 'var(--pass)' }}>IMMEDIATE JOINER</span>
+                  <span className="val" style={{ color: 'var(--pass)' }}>SERVING NOTICE PERIOD</span>
                 </div>
               </div>
             </div>
