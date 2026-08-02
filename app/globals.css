@@ -105,6 +105,7 @@ header {
   z-index: 100;
   background: rgba(13, 16, 21, 0.85);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -113,6 +114,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 68px;
+  gap: 16px;
 }
 
 .logo {
@@ -121,9 +123,10 @@ header {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--text);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .logo .dot {
@@ -133,6 +136,7 @@ header {
   background: var(--pass);
   box-shadow: 0 0 10px var(--pass);
   animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 @keyframes blink {
@@ -142,7 +146,8 @@ header {
 
 nav.links {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 24px);
   font-size: 13.5px;
   font-family: var(--font-mono);
 }
@@ -150,6 +155,9 @@ nav.links {
 nav.links a {
   color: var(--text-dim);
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 nav.links a:hover {
@@ -159,7 +167,8 @@ nav.links a:hover {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .btn {
@@ -171,6 +180,7 @@ nav.links a:hover {
   border: 1px solid var(--border-bright);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   white-space: nowrap;
   cursor: pointer;
@@ -212,10 +222,13 @@ nav.links a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   nav.links { display: none; }
-  .nav-actions .btn-text { display: none; }
   .menu-toggle { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .nav-actions .btn-text { display: none; }
 }
 
 .mobile-drawer {
