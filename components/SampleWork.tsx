@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Search, Bug, FileCheck, X, Terminal, ExternalLink } from 'lucide-react';
+import { retroSound } from '@/utils/audio';
 
 interface BugDetail {
   id: string;
@@ -134,6 +135,7 @@ export default function SampleWork() {
           <button
             className={`category-tab-btn ${category === 'native' ? 'active' : ''}`}
             onClick={() => {
+              retroSound.playSelect();
               setCategory('native');
               setSearchQuery('');
             }}
@@ -143,6 +145,7 @@ export default function SampleWork() {
           <button
             className={`category-tab-btn ${category === 'webapp' ? 'active' : ''}`}
             onClick={() => {
+              retroSound.playSelect();
               setCategory('webapp');
               setSearchQuery('');
             }}
@@ -155,13 +158,19 @@ export default function SampleWork() {
           <div className="sample-tabs">
             <button
               className={`sample-tab-btn ${panel === 'scenarios' ? 'active' : ''}`}
-              onClick={() => setPanel('scenarios')}
+              onClick={() => {
+                retroSound.playSelect();
+                setPanel('scenarios');
+              }}
             >
               Sample test cases
             </button>
             <button
               className={`sample-tab-btn ${panel === 'bugs' ? 'active' : ''}`}
-              onClick={() => setPanel('bugs')}
+              onClick={() => {
+                retroSound.playSelect();
+                setPanel('bugs');
+              }}
             >
               Sample bugs
             </button>
@@ -361,7 +370,10 @@ export default function SampleWork() {
                 <div
                   className="bug-card"
                   key={bug.id}
-                  onClick={() => setSelectedBug(bug)}
+                  onClick={() => {
+                    retroSound.playSelect();
+                    setSelectedBug(bug);
+                  }}
                 >
                   <div className="bug-top">
                     <span className="bug-id">{bug.id}</span>

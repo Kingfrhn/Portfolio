@@ -42,6 +42,7 @@ export default function RootLayout({
       <body>
         <div className="bg-grid" />
         <div className="ambient-light" />
+        <div className="crt-lines" />
         {children}
       </body>
     </html>

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Terminal as TerminalIcon, Play, HelpCircle, Download } from 'lucide-react';
+import { retroSound } from '@/utils/audio';
 
 interface HistoryLine {
   id: number;
@@ -26,6 +27,8 @@ export default function InteractiveTerminal() {
   const handleCommand = (cmdStr: string) => {
     const trimmed = cmdStr.trim().toLowerCase();
     if (!trimmed) return;
+
+    retroSound.playSelect();
 
     const newHistory: HistoryLine[] = [
       ...history,

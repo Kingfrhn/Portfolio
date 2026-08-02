@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Layers } from 'lucide-react';
+import { retroSound } from '@/utils/audio';
 
 interface Suite {
   id: string;
@@ -70,6 +70,11 @@ const suites: Suite[] = [
 export default function Projects() {
   const [filter, setFilter] = useState<'all' | 'mobile' | 'console' | 'pc' | 'web'>('all');
 
+  const handleFilterClick = (tag: 'all' | 'mobile' | 'console' | 'pc' | 'web') => {
+    retroSound.playSelect();
+    setFilter(tag);
+  };
+
   const filteredSuites = suites.filter((suite) => {
     if (filter === 'all') return true;
     return suite.tags.includes(filter);
@@ -78,7 +83,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="wrap">
-        <div className="eyebrow">Test suites</div>
+        <div className="eyebrow">GAME CARTRIDGE SUITES</div>
         <h2>Titles &amp; Projects Tested</h2>
         <p className="section-sub">
           Five global gaming studios, multi-platform coverage across Mobile, Console, PC, and Web platforms. Filter by platform focus below.
@@ -87,31 +92,31 @@ export default function Projects() {
         <div className="filter-row">
           <button
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => setFilter('all')}
+            onClick={() => handleFilterClick('all')}
           >
             All Projects (5)
           </button>
           <button
             className={`filter-btn ${filter === 'mobile' ? 'active' : ''}`}
-            onClick={() => setFilter('mobile')}
+            onClick={() => handleFilterClick('mobile')}
           >
             Mobile Focus
           </button>
           <button
             className={`filter-btn ${filter === 'console' ? 'active' : ''}`}
-            onClick={() => setFilter('console')}
+            onClick={() => handleFilterClick('console')}
           >
             Console Focus
           </button>
           <button
             className={`filter-btn ${filter === 'pc' ? 'active' : ''}`}
-            onClick={() => setFilter('pc')}
+            onClick={() => handleFilterClick('pc')}
           >
             PC / Windows
           </button>
           <button
             className={`filter-btn ${filter === 'web' ? 'active' : ''}`}
-            onClick={() => setFilter('web')}
+            onClick={() => handleFilterClick('web')}
           >
             Web / HTML5
           </button>
@@ -119,7 +124,11 @@ export default function Projects() {
 
         <div className="suites">
           {filteredSuites.map((suite) => (
-            <div className="suite-card" key={suite.id}>
+            <div 
+              className="suite-card" 
+              key={suite.id}
+              onClick={() => retroSound.playSelect()}
+            >
               <div>
                 <div className="suite-top">
                   <span className="suite-title">{suite.title}</span>
