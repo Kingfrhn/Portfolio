@@ -12,9 +12,9 @@ export default function Education() {
 
         <div className="edu-grid">
           <div className="edu-card">
-            <span className="badge badge-current">IN PROGRESS</span>
+            <span className="badge badge-pass">DONE</span>
             <h4>Software Testing with Java Automation (SDET)</h4>
-            <div className="edu-meta">QSpiders, Kolkata · 11/2024 → 02/2026</div>
+            <div className="edu-meta">QSpiders, Kolkata</div>
             <p>
               Core Java fundamentals, Object-Oriented Programming, Selenium WebDriver automation frameworks, FireFlink mobile and web test automation, TestNG, and Postman REST API testing.
             </p>

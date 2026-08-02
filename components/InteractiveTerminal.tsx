@@ -44,7 +44,7 @@ export default function InteractiveTerminal() {
     } else if (trimmed === 'status') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'STATUS: OPEN TO WORK\nNOTICE PERIOD: Serving Notice • Available Immediately\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 5 Years Senior QA Test Engineer',
+        text: 'STATUS: OPEN TO WORK\nPREFERENCE: Actively Seeking Manual Testing Roles\nNOTICE PERIOD: Serving Notice • Available Immediately\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 4.5+ Years Senior QA Test Engineer',
         type: 'success',
       });
     } else if (trimmed === 'skills') {
