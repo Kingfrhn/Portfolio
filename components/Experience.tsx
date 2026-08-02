@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section id="experience">
       <div className="wrap">
-        <div className="eyebrow">Execution log</div>
+        <div className="eyebrow">STAGE SELECT &amp; CAMPAIGN LOG</div>
         <h2>Experience</h2>
         <p className="section-sub">
           Five years of continuous QA execution, steadily scaling from test execution to leading multi-platform test cycles for AAA and live-ops studios.
@@ -14,7 +14,7 @@ export default function Experience() {
           <div className="log-entry">
             <div className="log-meta">
               08/2022 <span className="sep">→</span> present{' '}
-              <span className="badge badge-current">CURRENT ROLE</span>
+              <span className="badge badge-current">STAGE 2 // CURRENT ROLE</span>
             </div>
             <div className="log-title">Senior Test Engineer</div>
             <div className="log-company">
@@ -48,7 +48,7 @@ export default function Experience() {
           <div className="log-entry">
             <div className="log-meta">
               08/2021 <span className="sep">→</span> 08/2022{' '}
-              <span className="badge badge-pass">PASS</span>
+              <span className="badge badge-pass">STAGE 1 // COMPLETED</span>
             </div>
             <div className="log-title">Test Engineer</div>
             <div className="log-company">

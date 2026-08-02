@@ -1,32 +1,87 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Download, Menu, X, CheckCircle } from 'lucide-react';
+import { Mail, Download, Menu, X, CheckCircle, Volume2, VolumeX, RotateCcw } from 'lucide-react';
+import { retroSound } from '@/utils/audio';
 
-export default function Header() {
+interface HeaderProps {
+  onResetGame?: () => void;
+}
+
+export default function Header({ onResetGame }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
-  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const toggleMenu = () => {
+    retroSound.playSelect();
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const toggleAudio = () => {
+    const muted = retroSound.toggleMute();
+    setIsMuted(muted);
+    if (!muted) {
+      retroSound.playCoin();
+    }
+  };
+
+  const handleNavClick = () => {
+    retroSound.playSelect();
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    retroSound.playCoin();
+    if (onResetGame) {
+      onResetGame();
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <header>
       <div className="wrap nav">
-        <a href="#" className="logo">
-          <span className="dot"></span>OMAR.FM // QA
+        <a href="#" className="logo" onClick={handleLogoClick} title="Return to Arcade Title Screen">
+          <span className="dot"></span>PRESS START // OMAR.FM
         </a>
 
         <nav className="links">
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Coverage</a>
-          <a href="#sample-work">Sample work</a>
-          <a href="#terminal">CLI Playground</a>
-          <a href="#education">Training</a>
-          <a href="#contact">Contact</a>
+          <a href="#experience" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Experience</a>
+          <a href="#projects" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Projects</a>
+          <a href="#skills" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Coverage</a>
+          <a href="#sample-work" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Sample work</a>
+          <a href="#terminal" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>CLI Playground</a>
+          <a href="#education" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Training</a>
+          <a href="#contact" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Contact</a>
         </nav>
 
         <div className="nav-actions">
-          <a className="btn btn-text" href="mailto:omrfrhn@gmail.com">
+          {onResetGame && (
+            <button
+              className="btn btn-icon"
+              onClick={onResetGame}
+              title="Arcade Title Screen / Insert Coin"
+              aria-label="Arcade title screen"
+              style={{ padding: '8px 10px', color: 'var(--warn)' }}
+            >
+              <RotateCcw size={15} />
+            </button>
+          )}
+          <button
+            className="btn btn-icon"
+            onClick={toggleAudio}
+            title={isMuted ? "Enable 8-Bit Arcade Sound" : "Mute Sound"}
+            aria-label="Toggle retro audio"
+            style={{ padding: '8px 10px', color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
+          >
+            {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
+          </button>
+          <a
+            className="btn btn-text"
+            href="mailto:omrfrhn@gmail.com"
+            onClick={handleNavClick}
+          >
             <Mail size={14} /> Email
           </a>
           <a
@@ -34,10 +89,15 @@ export default function Header() {
             href="/resume.pdf"
             download="Omar_Farahan_Molla_Resume.pdf"
             title="Download PDF Resume"
+            onClick={() => retroSound.playCoin()}
           >
             <Download size={14} /> Resume
           </a>
-          <a className="btn btn-solid" href="#contact">
+          <a
+            className="btn btn-solid"
+            href="#contact"
+            onClick={handleNavClick}
+          >
             <CheckCircle size={14} /> Notice Period
           </a>
           <button
@@ -52,25 +112,25 @@ export default function Header() {
 
       {mobileMenuOpen && (
         <div className="mobile-drawer">
-          <a href="#experience" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#experience" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Experience <span>▸</span>
           </a>
-          <a href="#projects" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#projects" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Projects <span>▸</span>
           </a>
-          <a href="#skills" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#skills" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Coverage <span>▸</span>
           </a>
-          <a href="#sample-work" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#sample-work" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Sample work <span>▸</span>
           </a>
-          <a href="#terminal" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#terminal" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             CLI Playground <span>▸</span>
           </a>
-          <a href="#education" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#education" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Training <span>▸</span>
           </a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#contact" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Contact <span>▸</span>
           </a>
           <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
@@ -79,6 +139,7 @@ export default function Header() {
               style={{ width: '100%', justifyContent: 'center' }}
               href="/resume.pdf"
               download="Omar_Farahan_Molla_Resume.pdf"
+              onClick={() => retroSound.playCoin()}
             >
               <Download size={14} /> Download Resume PDF
             </a>

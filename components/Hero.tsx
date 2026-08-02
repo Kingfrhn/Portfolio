@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
-import { Mail, Download, Linkedin, Github, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Mail, Download, Linkedin, Github, CheckCircle2, Gamepad2 } from 'lucide-react';
+import { retroSound } from '@/utils/audio';
 
 export default function Hero() {
   return (
@@ -10,9 +10,11 @@ export default function Hero() {
         <div className="hero-grid">
           <div>
             <div className="status-line">
-              RUN #0847 <span className="sep">▸</span> STATUS:{' '}
-              <span style={{ color: 'var(--pass)', fontWeight: 600 }}>STABLE</span>{' '}
-              <span className="sep">▸</span> 0 CRITICAL BUGS
+              <span style={{ color: 'var(--warn)' }}>1UP: 084700</span>{' '}
+              <span className="sep">▸</span> HIGH SCORE:{' '}
+              <span style={{ color: 'var(--pass)' }}>999990</span>{' '}
+              <span className="sep">▸</span> STAGE: <span style={{ color: 'var(--accent)' }}>QA MASTER</span>{' '}
+              <span className="sep">▸</span> LIVES: <span style={{ color: 'var(--bug)' }}>❤ ❤ ❤</span>
               <span className="cursor"></span>
             </div>
 
@@ -32,10 +34,15 @@ export default function Hero() {
                 className="btn btn-solid"
                 href="/resume.pdf"
                 download="Omar_Farahan_Molla_Resume.pdf"
+                onClick={() => retroSound.playCoin()}
               >
                 <Download size={15} /> Download Resume PDF
               </a>
-              <a className="btn" href="mailto:omrfrhn@gmail.com">
+              <a 
+                className="btn" 
+                href="mailto:omrfrhn@gmail.com"
+                onClick={() => retroSound.playSelect()}
+              >
                 <Mail size={15} /> Get in touch
               </a>
               <a
@@ -43,6 +50,7 @@ export default function Hero() {
                 href="https://linkedin.com/in/omrfrhn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => retroSound.playSelect()}
               >
                 <Linkedin size={15} /> LinkedIn ↗
               </a>
@@ -51,6 +59,7 @@ export default function Hero() {
                 href="https://github.com/Kingfrhn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => retroSound.playSelect()}
               >
                 <Github size={15} /> GitHub ↗
               </a>
@@ -64,8 +73,8 @@ export default function Hero() {
                 alt="Omar Farahan Molla — Senior QA Test Engineer"
               />
               <div className="profile-card-badge">
-                <CheckCircle2 size={16} style={{ color: 'var(--pass)', flexShrink: 0 }} />
-                <span>Serving Notice • Immediate Joiner</span>
+                <Gamepad2 size={16} style={{ color: 'var(--pass)', flexShrink: 0 }} />
+                <span>P1 READY • Serving Notice</span>
               </div>
             </div>
           </div>
