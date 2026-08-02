@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Download, Linkedin, Github, CheckCircle2, Gamepad2 } from 'lucide-react';
+import { Mail, Download, Linkedin, Github, Gamepad2, Briefcase, MapPin } from 'lucide-react';
 import { retroSound } from '@/utils/audio';
 
 export default function Hero() {
@@ -20,10 +20,17 @@ export default function Hero() {
 
             <h1>Omar Farahan Molla</h1>
 
-            <p className="role">
-              Senior QA Test Engineer <span className="pipe">/</span> Game &amp; Application Testing{' '}
-              <span className="pipe">/</span> Kolkata, India
-            </p>
+            <div className="role-tags">
+              <span className="role-tag">
+                <Briefcase size={15} style={{ color: 'var(--accent)' }} /> Senior QA Test Engineer
+              </span>
+              <span className="role-tag">
+                <Gamepad2 size={15} style={{ color: 'var(--pass)' }} /> Game &amp; Application Testing
+              </span>
+              <span className="role-tag">
+                <MapPin size={15} style={{ color: 'var(--warn)' }} /> Kolkata, India
+              </span>
+            </div>
 
             <p className="bio">
               I break builds before players do. 4.5+ years testing games and applications across mobile, console, PC, and web, running functional, regression, and exploratory cycles for global studios including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently on notice period and actively looking for Manual Testing &amp; QA Engineer roles.

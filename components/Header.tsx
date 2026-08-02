@@ -76,7 +76,7 @@ export default function Header({ onResetGame }: HeaderProps) {
     <header>
       <div className="wrap nav">
         <a href="#" className="logo" onClick={handleLogoClick} title="Return to Arcade Title Screen">
-          <span className="dot"></span><span className="logo-full">PRESS START // OMAR.FM</span><span className="logo-short">OMAR.FM</span>
+          <span className="dot"></span><span className="logo-full">PRESS START // OMAR</span><span className="logo-short">OMAR</span>
         </a>
 
         <nav className="links">
@@ -84,7 +84,7 @@ export default function Header({ onResetGame }: HeaderProps) {
           <a href="#projects" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Projects</a>
           <a href="#skills" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Coverage</a>
           <a href="#sample-work" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Sample work</a>
-          <a href="#terminal" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>CLI Playground</a>
+          <a href="#terminal" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Playground</a>
           <a href="#education" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Training</a>
           <a href="#contact" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Contact</a>
         </nav>
@@ -96,7 +96,6 @@ export default function Header({ onResetGame }: HeaderProps) {
             onClick={cycleTheme}
             title={`Current Theme: ${themeMode.toUpperCase()} (Click to switch)`}
             aria-label="Switch theme mode"
-            style={{ padding: '8px 10px', color: 'var(--accent)' }}
           >
             {themeMode === 'dark' && <Moon size={15} />}
             {themeMode === 'light' && <Sun size={15} />}
@@ -109,7 +108,6 @@ export default function Header({ onResetGame }: HeaderProps) {
               onClick={onResetGame}
               title="Arcade Title Screen / Insert Coin"
               aria-label="Arcade title screen"
-              style={{ padding: '8px 10px', color: 'var(--warn)' }}
             >
               <RotateCcw size={15} />
             </button>
@@ -119,7 +117,7 @@ export default function Header({ onResetGame }: HeaderProps) {
             onClick={toggleAudio}
             title={isMuted ? "Enable 8-Bit Arcade Sound" : "Mute Sound"}
             aria-label="Toggle retro audio"
-            style={{ padding: '8px 10px', color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
+            style={{ color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
           >
             {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
           </button>
@@ -179,22 +177,66 @@ export default function Header({ onResetGame }: HeaderProps) {
           <a href="#contact" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
             Contact <span>▸</span>
           </a>
-          <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
-            <button
-              className="btn"
-              style={{ width: '100%', justifyContent: 'center' }}
-              onClick={cycleTheme}
-            >
-              Theme: {themeMode.toUpperCase()}
-            </button>
+          
+          <div className="mobile-drawer-actions">
+            <div className="mobile-action-row">
+              <button
+                className="btn"
+                style={{ flex: 1, justifyContent: 'center' }}
+                onClick={cycleTheme}
+              >
+                {themeMode === 'dark' && <Moon size={15} />}
+                {themeMode === 'light' && <Sun size={15} />}
+                {themeMode === 'system' && <Monitor size={15} />}
+                Theme: {themeMode.toUpperCase()}
+              </button>
+              <button
+                className="btn"
+                onClick={toggleAudio}
+                style={{ color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
+              >
+                {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
+                {isMuted ? 'Muted' : 'Audio On'}
+              </button>
+            </div>
+            
+            <div className="mobile-action-row">
+              <a
+                className="btn"
+                style={{ flex: 1, justifyContent: 'center' }}
+                href="mailto:omrfrhn@gmail.com"
+                onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}
+              >
+                <Mail size={14} /> Email Me
+              </a>
+              {onResetGame && (
+                <button
+                  className="btn"
+                  onClick={() => { setMobileMenuOpen(false); onResetGame(); }}
+                  style={{ color: 'var(--warn)' }}
+                >
+                  <RotateCcw size={15} /> Arcade
+                </button>
+              )}
+            </div>
+
             <a
               className="btn btn-solid"
               style={{ width: '100%', justifyContent: 'center' }}
               href="/resume.pdf"
               download="Omar_Farahan_Molla_Resume.pdf"
-              onClick={() => retroSound.playCoin()}
+              onClick={() => { setMobileMenuOpen(false); retroSound.playCoin(); }}
             >
-              <Download size={14} /> Resume PDF
+              <Download size={14} /> Download Resume PDF
+            </a>
+            
+            <a
+              className="btn"
+              style={{ width: '100%', justifyContent: 'center', borderColor: 'var(--pass)', color: 'var(--pass)' }}
+              href="#contact"
+              onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}
+            >
+              <CheckCircle size={14} /> Status: Serving Notice Period
             </a>
           </div>
         </div>

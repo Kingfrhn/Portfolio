@@ -1,5 +1,7 @@
 'use client';
 
+import { Building2, MapPin } from 'lucide-react';
+
 export default function Experience() {
   return (
     <section id="experience">
@@ -18,7 +20,13 @@ export default function Experience() {
             </div>
             <div className="log-title">Senior Test Engineer</div>
             <div className="log-company">
-              GlobalStep Services Private Limited · Pune / Kolkata, India
+              <span className="company-item">
+                <Building2 size={14} style={{ color: 'var(--pass)' }} /> GlobalStep Services Private Limited
+              </span>
+              <span className="sep">·</span>
+              <span className="location-item">
+                <MapPin size={14} style={{ color: 'var(--warn)' }} /> Pune / Kolkata, India
+              </span>
             </div>
             <ul className="log-list">
               <li>
@@ -52,7 +60,13 @@ export default function Experience() {
             </div>
             <div className="log-title">Test Engineer</div>
             <div className="log-company">
-              GlobalStep Services Private Limited · Pune, India
+              <span className="company-item">
+                <Building2 size={14} style={{ color: 'var(--pass)' }} /> GlobalStep Services Private Limited
+              </span>
+              <span className="sep">·</span>
+              <span className="location-item">
+                <MapPin size={14} style={{ color: 'var(--warn)' }} /> Pune, India
+              </span>
             </div>
             <ul className="log-list">
               <li>
