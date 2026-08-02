@@ -14,7 +14,7 @@ export default function Contact() {
           <h2>Let's Ship High-Quality, Stable Builds Together</h2>
 
           <p className="section-sub">
-            Actively seeking Senior QA / QA Test Engineer roles in game testing or application software. Available for full-time employment, contract cycles, or technical QA interviews immediately.
+            Actively seeking Manual Testing &amp; Senior QA Test Engineer roles in game testing or application software. Available for full-time employment, contract cycles, or technical QA interviews immediately.
           </p>
 
           <div className="contact-actions">
@@ -53,7 +53,7 @@ export default function Contact() {
 
       <footer className="wrap">
         <span>© {new Date().getFullYear()} Omar Farahan Molla — Senior QA Test Engineer</span>
-        <span>Kolkata, India · Next.js &amp; Vercel / GitHub Pages Ready</span>
+        <span>Kolkata, India</span>
       </footer>
     </>
   );

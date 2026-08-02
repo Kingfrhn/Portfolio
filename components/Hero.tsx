@@ -26,7 +26,7 @@ export default function Hero() {
             </p>
 
             <p className="bio">
-              I break builds before players do. Five years testing games and applications across mobile, console, PC, and web, running functional, regression, and exploratory cycles for global studios including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently on notice period and available for full-time QA roles immediately.
+              I break builds before players do. 4.5+ years testing games and applications across mobile, console, PC, and web, running functional, regression, and exploratory cycles for global studios including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently on notice period and actively looking for Manual Testing &amp; QA Engineer roles.
             </p>
 
             <div className="hero-actions">
@@ -74,7 +74,7 @@ export default function Hero() {
               />
               <div className="profile-card-badge">
                 <Gamepad2 size={16} style={{ color: 'var(--pass)', flexShrink: 0 }} />
-                <span>P1 READY • Serving Notice</span>
+                <span>P1 READY • Manual Testing Roles</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Hero() {
         <div className="stats">
           <div className="stat">
             <div className="num">
-              5<span className="unit">yrs</span>
+              4.5<span className="unit">+ yrs</span>
             </div>
             <div className="label">QA experience</div>
           </div>

@@ -1,16 +1,49 @@
 'use client';
 
-import { useState } from 'react';
-import { Mail, Download, Menu, X, CheckCircle, Volume2, VolumeX, RotateCcw } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Mail, Download, Menu, X, CheckCircle, Volume2, VolumeX, RotateCcw, Sun, Moon, Monitor } from 'lucide-react';
 import { retroSound } from '@/utils/audio';
 
 interface HeaderProps {
   onResetGame?: () => void;
 }
 
+type ThemeMode = 'dark' | 'light' | 'system';
+
 export default function Header({ onResetGame }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('omar_portfolio_theme') as ThemeMode | null;
+    if (saved && ['dark', 'light', 'system'].includes(saved)) {
+      setThemeMode(saved);
+      applyTheme(saved);
+    }
+  }, []);
+
+  const applyTheme = (mode: ThemeMode) => {
+    if (mode === 'system') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', mode);
+    }
+  };
+
+  const cycleTheme = () => {
+    retroSound.playSelect();
+    const nextTheme: Record<ThemeMode, ThemeMode> = {
+      dark: 'light',
+      light: 'system',
+      system: 'dark',
+    };
+    const next = nextTheme[themeMode];
+    setThemeMode(next);
+    localStorage.setItem('omar_portfolio_theme', next);
+    applyTheme(next);
+  };
 
   const toggleMenu = () => {
     retroSound.playSelect();
@@ -57,6 +90,19 @@ export default function Header({ onResetGame }: HeaderProps) {
         </nav>
 
         <div className="nav-actions">
+          {/* Theme Mode Switcher */}
+          <button
+            className="btn btn-icon"
+            onClick={cycleTheme}
+            title={`Current Theme: ${themeMode.toUpperCase()} (Click to switch)`}
+            aria-label="Switch theme mode"
+            style={{ padding: '8px 10px', color: 'var(--accent)' }}
+          >
+            {themeMode === 'dark' && <Moon size={15} />}
+            {themeMode === 'light' && <Sun size={15} />}
+            {themeMode === 'system' && <Monitor size={15} />}
+          </button>
+
           {onResetGame && (
             <button
               className="btn btn-icon"
@@ -134,6 +180,13 @@ export default function Header({ onResetGame }: HeaderProps) {
             Contact <span>▸</span>
           </a>
           <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
+            <button
+              className="btn"
+              style={{ width: '100%', justifyContent: 'center' }}
+              onClick={cycleTheme}
+            >
+              Theme: {themeMode.toUpperCase()}
+            </button>
             <a
               className="btn btn-solid"
               style={{ width: '100%', justifyContent: 'center' }}
@@ -141,7 +194,7 @@ export default function Header({ onResetGame }: HeaderProps) {
               download="Omar_Farahan_Molla_Resume.pdf"
               onClick={() => retroSound.playCoin()}
             >
-              <Download size={14} /> Download Resume PDF
+              <Download size={14} /> Resume PDF
             </a>
           </div>
         </div>

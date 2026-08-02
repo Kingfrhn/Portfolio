@@ -59,7 +59,7 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
               <div className="char-stat-list">
                 <div className="char-stat-item">
                   <span className="label">EXP LEVEL:</span>
-                  <span className="val">5+ YEARS (LVL 99)</span>
+                  <span className="val">4.5+ YEARS (LVL 99)</span>
                 </div>
                 <div className="char-stat-item">
                   <span className="label">SPECIALTY:</span>
@@ -68,6 +68,10 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
                 <div className="char-stat-item">
                   <span className="label">PLATFORMS:</span>
                   <span className="val">MOBILE • CONSOLE • PC • WEB</span>
+                </div>
+                <div className="char-stat-item">
+                  <span className="label">PREFERENCE:</span>
+                  <span className="val" style={{ color: 'var(--accent)' }}>MANUAL TESTING ROLES</span>
                 </div>
                 <div className="char-stat-item">
                   <span className="label">STATUS:</span>
