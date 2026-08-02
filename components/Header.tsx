@@ -76,7 +76,7 @@ export default function Header({ onResetGame }: HeaderProps) {
     <header>
       <div className="wrap nav">
         <a href="#" className="logo" onClick={handleLogoClick} title="Return to Arcade Title Screen">
-          <span className="dot"></span>PRESS START // OMAR.FM
+          <span className="dot"></span><span className="logo-full">PRESS START // OMAR.FM</span><span className="logo-short">OMAR.FM</span>
         </a>
 
         <nav className="links">
