@@ -23,6 +23,8 @@ export default function SkillsCoverage() {
               <span className="tag">Functional Testing</span>
               <span className="tag">Regression Testing</span>
               <span className="tag">Exploratory Testing</span>
+              <span className="tag">Event Testing</span>
+              <span className="tag">Events Tracking</span>
               <span className="tag">Smoke &amp; Sanity</span>
               <span className="tag">UI/UX Testing</span>
               <span className="tag">Test Case Design</span>
@@ -43,11 +45,9 @@ export default function SkillsCoverage() {
             <div className="tag-cloud">
               <span className="tag">Jira</span>
               <span className="tag">TestRail</span>
-              <span className="tag">ADB (Android Debug Bridge)</span>
               <span className="tag">Android Logcat</span>
               <span className="tag">Charles Proxy</span>
               <span className="tag">Android Studio</span>
-              <span className="tag">Console Log Extraction</span>
               <span className="tag">Crash Log Analysis</span>
               <span className="tag">Slack</span>
             </div>
@@ -67,7 +67,6 @@ export default function SkillsCoverage() {
               <span className="tag">SDLC</span>
               <span className="tag">Defect Lifecycle Mgmt</span>
               <span className="tag">UAT</span>
-              <span className="tag">Sprint Planning</span>
               <span className="tag">RCA (Root Cause Analysis)</span>
             </div>
           </div>

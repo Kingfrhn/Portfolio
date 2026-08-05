@@ -96,13 +96,13 @@ export default function Hero() {
           </div>
           <div className="stat">
             <div className="num">
-              1000<span className="unit">+</span>
+              600<span className="unit">+</span>
             </div>
             <div className="label">Test cases written</div>
           </div>
           <div className="stat">
             <div className="num">
-              800<span className="unit">+</span>
+              900<span className="unit">+</span>
             </div>
             <div className="label">Bugs logged in Jira</div>
           </div>
