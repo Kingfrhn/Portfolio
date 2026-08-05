@@ -50,13 +50,13 @@ export default function InteractiveTerminal() {
     } else if (trimmed === 'skills') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'SKILLS: Functional, Regression, Exploratory, Smoke & Sanity, Cross-Platform\nTOOLS: Jira, TestRail, ADB, Android Logcat, Charles Proxy, Android Studio\nAUTOMATION TRACK: Core Java, Selenium WebDriver, FireFlink, Postman API',
+        text: 'SKILLS: Functional, Regression, Exploratory, Event Testing, Events Tracking, Smoke & Sanity, Cross-Platform\nTOOLS: Jira, TestRail, Android Logcat, Charles Proxy, Android Studio\nAUTOMATION TRACK: Core Java, Selenium WebDriver, FireFlink, Postman API',
         type: 'output',
       });
     } else if (trimmed === 'bugs') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'METRICS:\n  [✓] Test Cases Authored: 1000+\n  [✓] Defects Logged in Jira: 800+\n  [✓] Platforms Covered: Android, iOS, Windows, macOS, PS4, PS5, Xbox, Switch',
+        text: 'METRICS:\n  [✓] Test Cases Authored: 600+\n  [✓] Defects Logged in Jira: 900+\n  [✓] Platforms Covered: Android, iOS, Windows, macOS, PS4, PS5, Xbox, Switch',
         type: 'success',
       });
     } else if (trimmed === 'contact') {
@@ -121,12 +121,12 @@ export default function InteractiveTerminal() {
                 style={{
                   color:
                     line.type === 'input'
-                      ? 'var(--pass)'
+                      ? '#00ff66'
                       : line.type === 'error'
-                      ? 'var(--bug)'
+                      ? '#ff3366'
                       : line.type === 'success'
-                      ? 'var(--pass)'
-                      : 'var(--text-dim)',
+                      ? '#00ff66'
+                      : '#e2e8f0',
                   whiteSpace: 'pre-wrap',
                 }}
               >

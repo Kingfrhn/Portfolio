@@ -42,7 +42,7 @@ export default function Experience() {
                 Validated cross-platform builds across Android, iOS, Windows, macOS, PS4, PS5, Xbox, and Nintendo Switch.
               </li>
               <li>
-                Leveraged ADB, Logcat, and Charles Proxy to capture stack traces, diagnose API payload errors, and isolate network bandwidth bottlenecks.
+                Leveraged Logcat and Charles Proxy to capture stack traces, diagnose API payload errors, isolate network bandwidth bottlenecks, and execute event testing &amp; events tracking validation.
               </li>
               <li>
                 Conducted technical onboarding, KT sessions, and test plan reviews for incoming QA engineers to enforce testing standards.
