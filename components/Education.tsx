@@ -12,44 +12,55 @@ export default function Education() {
 
         <div className="edu-grid">
           <div className="edu-card">
-            <span className="badge badge-pass">DONE</span>
+            <span className="badge badge-pass">TRAINED</span>
             <h4>Software Testing with Java Automation (SDET)</h4>
-            <div className="edu-meta">QSpiders, Kolkata</div>
+            <div className="edu-meta">QSpiders · Kolkata, India</div>
             <p>
-              Core Java fundamentals, Object-Oriented Programming, Selenium WebDriver automation frameworks, FireFlink mobile and web test automation, TestNG, and Postman REST API testing.
+              Core Java Fundamentals, Selenium WebDriver, Automation Framework Concepts, and Web &amp; Mobile Automation using FireFlink.
+            </p>
+          </div>
+
+          <div className="edu-card">
+            <span className="badge badge-pass">TRAINED</span>
+            <h4>CCNA Training</h4>
+            <div className="edu-meta">Evision Technoserve · Kolkata, India</div>
+            <p>
+              TCP/IP, Routing &amp; Switching, VLAN, DNS, DHCP, Virtualization, AD DS, OSPF, and Network Troubleshooting.
             </p>
           </div>
 
           <div className="edu-card">
             <span className="badge badge-pass">PASSED</span>
-            <h4>Bachelor of Engineering, CSE</h4>
+            <h4>Bachelor of Engineering (B.E)</h4>
             <div className="edu-meta">
-              University Institute of Technology, Burdwan · 09/2018 → 08/2021 · GPA 7.7 / 10
+              University Institute of Technology · 09/2018 → 08/2021 · Burdwan, West Bengal, India
             </div>
             <p>
-              Comprehensive computer science curriculum including Data Structures, Algorithms, Software Engineering, Database Systems, and Computer Networks.
+              Bachelor of Engineering degree program completed with comprehensive technical coursework.
             </p>
           </div>
 
           <div className="edu-card">
             <span className="badge badge-pass">PASSED</span>
-            <h4>Technical Diploma</h4>
+            <h4>Diploma</h4>
             <div className="edu-meta">
-              RRK Government Polytechnic, Midnapore · 08/2015 → 06/2018
+              RRK Government Polytechnic · 08/2015 → 06/2018 · Midnapore, West Bengal, India
             </div>
             <p>
-              Foundational engineering technical diploma completed prior to engineering degree admission.
+              Foundational engineering polytechnic technical diploma.
             </p>
           </div>
 
-          <div className="edu-card">
+          <div className="edu-card" style={{ gridColumn: 'span 1' }}>
             <span className="badge badge-pass">CERTIFIED</span>
-            <h4>Professional Certifications</h4>
-            <div className="edu-meta">Google &amp; Cisco</div>
+            <h4>Certifications &amp; Workshops</h4>
+            <div className="edu-meta">Be10X, Google, Cisco</div>
             <p>
-              • Google Technical Support Fundamentals Certification
+              • AI Tools Workshop | Be10X
               <br />
-              • Cisco Cybersecurity Essentials Certification
+              • Technical Support Fundamentals | Google
+              <br />
+              • Cybersecurity Essentials | Cisco
             </p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function SkillsCoverage() {
         <div className="coverage-grid">
           <div className="coverage-group">
             <h3>
-              <span>Core QA &amp; Execution</span>
+              <span>QA &amp; Testing &amp; Activities</span>
               <span style={{ color: 'var(--pass)' }}>95%</span>
             </h3>
             <div className="coverage-bar-track">
@@ -23,69 +23,91 @@ export default function SkillsCoverage() {
               <span className="tag">Functional Testing</span>
               <span className="tag">Regression Testing</span>
               <span className="tag">Exploratory Testing</span>
-              <span className="tag">Event Testing</span>
-              <span className="tag">Events Tracking</span>
-              <span className="tag">Smoke &amp; Sanity</span>
+              <span className="tag">System Testing</span>
+              <span className="tag">Smoke Testing</span>
+              <span className="tag">Sanity Testing</span>
               <span className="tag">UI/UX Testing</span>
+              <span className="tag">Compatibility Testing</span>
+              <span className="tag">Cross-Platform Testing</span>
               <span className="tag">Test Case Design</span>
-              <span className="tag">Cross-Platform Validation</span>
-              <span className="tag">Live-Ops Testing</span>
-              <span className="tag">Boundary Value Analysis</span>
+              <span className="tag">Test Execution</span>
+              <span className="tag">Test Scenario Analysis</span>
+              <span className="tag">Requirements Review</span>
+              <span className="tag">Defect Lifecycle Management</span>
+              <span className="tag">Defect Verification</span>
+              <span className="tag">Bug Reporting &amp; Documentation</span>
+              <span className="tag">Retesting</span>
+              <span className="tag">Release Validation</span>
+              <span className="tag">Reproduction &amp; Issue Investigation</span>
             </div>
           </div>
 
           <div className="coverage-group">
             <h3>
-              <span>Tools &amp; Technical Debugging</span>
+              <span>Tools &amp; Platforms</span>
+              <span style={{ color: 'var(--pass)' }}>92%</span>
+            </h3>
+            <div className="coverage-bar-track">
+              <div className="coverage-bar-fill" style={{ width: '92%' }}></div>
+            </div>
+            <div className="tag-cloud">
+              <span className="tag">Jira</span>
+              <span className="tag">TestRail</span>
+              <span className="tag">ADB</span>
+              <span className="tag">Android Logcat</span>
+              <span className="tag">Charles Proxy</span>
+              <span className="tag">Android Studio</span>
+              <span className="tag">Crash Log Analysis</span>
+              <span className="tag">Slack</span>
+              <span className="tag">Android</span>
+              <span className="tag">iOS</span>
+              <span className="tag">Windows</span>
+              <span className="tag">macOS</span>
+              <span className="tag">PS4 &amp; PS5</span>
+              <span className="tag">Xbox</span>
+              <span className="tag">Nintendo Switch</span>
+              <span className="tag">HTML5/Web</span>
+            </div>
+          </div>
+
+          <div className="coverage-group">
+            <h3>
+              <span>Hardware &amp; IT Troubleshooting</span>
               <span style={{ color: 'var(--pass)' }}>90%</span>
             </h3>
             <div className="coverage-bar-track">
               <div className="coverage-bar-fill" style={{ width: '90%' }}></div>
             </div>
             <div className="tag-cloud">
-              <span className="tag">Jira</span>
-              <span className="tag">TestRail</span>
-              <span className="tag">Android Logcat</span>
-              <span className="tag">Charles Proxy</span>
-              <span className="tag">Android Studio</span>
-              <span className="tag">Crash Log Analysis</span>
-              <span className="tag">Slack</span>
+              <span className="tag">Hardware &amp; Peripheral Troubleshooting</span>
+              <span className="tag">Test Device Setup &amp; Configuration</span>
+              <span className="tag">Software Installation &amp; Configuration</span>
+              <span className="tag">Windows Troubleshooting</span>
+              <span className="tag">LAN/Wi-Fi Troubleshooting</span>
+              <span className="tag">Basic TCP/IP Troubleshooting</span>
+              <span className="tag">Device Connectivity Troubleshooting</span>
             </div>
           </div>
 
           <div className="coverage-group">
             <h3>
-              <span>SDLC &amp; Methodologies</span>
-              <span style={{ color: 'var(--pass)' }}>88%</span>
+              <span>Automation &amp; API (Upskilling)</span>
+              <span style={{ color: 'var(--warn)' }}>45%</span>
             </h3>
             <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '88%' }}></div>
+              <div className="coverage-bar-fill" style={{ width: '45%' }}></div>
             </div>
             <div className="tag-cloud">
-              <span className="tag">Agile / Scrum</span>
-              <span className="tag">STLC</span>
-              <span className="tag">SDLC</span>
-              <span className="tag">Defect Lifecycle Mgmt</span>
-              <span className="tag">UAT</span>
-              <span className="tag">RCA (Root Cause Analysis)</span>
-            </div>
-          </div>
-
-          <div className="coverage-group">
-            <h3>
-              <span>API &amp; Automation (Upskilling Track)</span>
-              <span style={{ color: 'var(--warn)' }}>30%</span>
-            </h3>
-            <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '30%' }}></div>
-            </div>
-            <div className="tag-cloud">
-              <span className="tag">Selenium WebDriver</span>
+              <span className="tag">Selenium WebDriver (Basic)</span>
               <span className="tag">Core Java</span>
-              <span className="tag">FireFlink Automation</span>
-              <span className="tag">API Testing (REST)</span>
-              <span className="tag">Postman</span>
-              <span className="tag">TestNG Fundamentals</span>
+              <span className="tag">FireFlink</span>
+              <span className="tag">Automation Framework Concepts</span>
+              <span className="tag">Web &amp; Mobile Automation</span>
+              <span className="tag">API Testing Concepts</span>
+              <span className="tag">REST &amp; SOAP</span>
+              <span className="tag">JSON &amp; HTTP Methods</span>
+              <span className="tag">STLC &amp; SDLC</span>
+              <span className="tag">Agile / Scrum</span>
             </div>
           </div>
         </div>
