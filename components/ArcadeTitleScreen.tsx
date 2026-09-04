@@ -59,7 +59,7 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
               <div className="char-stat-list">
                 <div className="char-stat-item">
                   <span className="label">EXP LEVEL:</span>
-                  <span className="val">4.5+ YEARS (LVL 99)</span>
+                  <span className="val">5+ YEARS (LVL 99)</span>
                 </div>
                 <div className="char-stat-item">
                   <span className="label">SPECIALTY:</span>
@@ -71,11 +71,11 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
                 </div>
                 <div className="char-stat-item">
                   <span className="label">PREFERENCE:</span>
-                  <span className="val" style={{ color: 'var(--accent)' }}>MANUAL TESTING ROLES</span>
+                  <span className="val" style={{ color: '#00e5ff' }}>MANUAL TESTING ROLES</span>
                 </div>
                 <div className="char-stat-item">
                   <span className="label">STATUS:</span>
-                  <span className="val" style={{ color: 'var(--pass)' }}>SERVING NOTICE PERIOD</span>
+                  <span className="val" style={{ color: '#00ff66' }}>SERVING NOTICE (LWD: 9th OCT 2026)</span>
                 </div>
               </div>
             </div>

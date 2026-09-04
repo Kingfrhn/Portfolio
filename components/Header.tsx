@@ -141,8 +141,9 @@ export default function Header({ onResetGame }: HeaderProps) {
             className="btn btn-solid"
             href="#contact"
             onClick={handleNavClick}
+            title="Serving Notice Period — LWD: 9th October 2026"
           >
-            <CheckCircle size={14} /> Notice Period
+            <CheckCircle size={14} /> Notice (LWD: 9 Oct 2026)
           </a>
           <button
             className="menu-toggle"
@@ -236,7 +237,7 @@ export default function Header({ onResetGame }: HeaderProps) {
               href="#contact"
               onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}
             >
-              <CheckCircle size={14} /> Status: Serving Notice Period
+              <CheckCircle size={14} /> Serving Notice (LWD: 9th Oct 2026)
             </a>
           </div>
         </div>

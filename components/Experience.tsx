@@ -9,13 +9,13 @@ export default function Experience() {
         <div className="eyebrow">STAGE SELECT &amp; CAMPAIGN LOG</div>
         <h2>Experience</h2>
         <p className="section-sub">
-          Five years of continuous QA execution, steadily scaling from test execution to leading multi-platform test cycles for AAA and live-ops studios.
+          5+ years of continuous QA execution, steadily scaling from test execution to leading multi-platform test cycles for AAA and live-ops studios.
         </p>
 
         <div className="log">
           <div className="log-entry">
             <div className="log-meta">
-              08/2022 <span className="sep">→</span> present{' '}
+              08/2022 <span className="sep">→</span> Present{' '}
               <span className="badge badge-current">STAGE 2 // CURRENT ROLE</span>
             </div>
             <div className="log-title">Senior Test Engineer</div>
@@ -25,30 +25,33 @@ export default function Experience() {
               </span>
               <span className="sep">·</span>
               <span className="location-item">
-                <MapPin size={14} style={{ color: 'var(--warn)' }} /> Pune / Kolkata, India
+                <MapPin size={14} style={{ color: 'var(--warn)' }} /> Pune, India
               </span>
             </div>
             <ul className="log-list">
               <li>
-                Led a dedicated team of 5 to 8 QA testers across multi-platform release cycles, optimizing task allocation and daily execution output.
+                Led a team of 5–8 testers and coordinated daily QA activities during multi-platform testing cycles.
               </li>
               <li>
-                Executed 200+ functional, integration, and regression test cases per sprint to guarantee release stability ahead of production deployment.
+                Designed and executed functional and regression test cases to validate feature stability before release.
               </li>
               <li>
-                Logged and managed 150+ defects per release cycle in Jira with precise reproduction steps, video captures, and attached system/crash logs.
+                Logged and tracked defects in Jira with detailed reproduction steps, logs, and screenshots.
               </li>
               <li>
-                Validated cross-platform builds across Android, iOS, Windows, macOS, PS4, PS5, Xbox, and Nintendo Switch.
+                Performed functional, regression, exploratory, UI/UX, compatibility, and cross-platform testing across mobile, web, PC, and console platforms.
               </li>
               <li>
-                Leveraged Logcat and Charles Proxy to capture stack traces, diagnose API payload errors, isolate network bandwidth bottlenecks, and execute event testing &amp; events tracking validation.
+                Retested fixes, performed regression validation, and collaborated with developers to investigate and resolve defects.
               </li>
               <li>
-                Conducted technical onboarding, KT sessions, and test plan reviews for incoming QA engineers to enforce testing standards.
+                Used ADB, Logcat, Charles Proxy, and Android Studio for crash, network, and software issue investigation.
               </li>
               <li>
-                Participated in live-ops release validation sessions with remote client producers and leads to greenlight build shipments.
+                Reviewed requirements for testability and risk areas and provided QA feedback during development.
+              </li>
+              <li>
+                Supported QA environments with basic hardware, peripheral, software, device, and LAN/Wi-Fi troubleshooting.
               </li>
             </ul>
           </div>
@@ -70,19 +73,19 @@ export default function Experience() {
             </div>
             <ul className="log-list">
               <li>
-                Conducted functional, exploratory, boundary value, and regression testing across mobile, console, and web game titles.
+                Performed functional, exploratory, regression, UI/UX, and compatibility testing across mobile, console, and web applications.
               </li>
               <li>
-                Uncovered critical edge-case gameplay and UI/UX defects early in development sprints to reduce build breakage risk.
+                Created, maintained, and executed test cases based on feature requirements and test scenarios.
               </li>
               <li>
-                Authored and updated structured test suites, test matrices, and execution reports in TestRail and Jira.
+                Identified and documented functional, UI, and edge-case defects with clear reproduction steps.
               </li>
               <li>
-                Reviewed technical specification documents to ensure feature testability and highlight risk areas before cycle kickoff.
+                Reported, tracked, retested, and verified defects using Jira and TestRail.
               </li>
               <li>
-                Collaborated directly with client leads and development teams to verify fixed defects and resolve blocking issues.
+                Reviewed requirements for testability and risk areas and collaborated with developers to reproduce and close defects.
               </li>
             </ul>
           </div>

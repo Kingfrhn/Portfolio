@@ -1,6 +1,6 @@
 # Omar Farahan Molla — Senior QA Test Engineer Portfolio
 
-A modern, high-performance **Next.js (App Router)** portfolio built to showcase 4.5+ years of QA game and application testing experience across Mobile, Console, PC, and Web platforms.
+A modern, high-performance **Next.js (App Router)** portfolio built to showcase 5+ years of QA game and application testing experience across Mobile, Console, PC, and Web platforms.
 
 ![Omar Farahan Molla Portfolio Banner](public/photo_omar.jpg)
 

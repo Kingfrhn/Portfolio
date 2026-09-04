@@ -1895,3 +1895,40 @@ html[data-theme="light"] .terminal-body {
 html[data-theme="light"] .terminal-input {
   color: #f0f6fc;
 }
+
+/* Guarantee Arcade Cabinet legibility in Light Mode */
+html[data-theme="light"] .arcade-cabinet-frame {
+  background: #141024;
+  color: #f5f0ff;
+  border-color: #564388;
+}
+
+html[data-theme="light"] .arcade-char-card {
+  background: #1d1833;
+  border-color: #564388;
+}
+
+html[data-theme="light"] .char-card-header {
+  color: #f5f0ff;
+  border-bottom-color: #332754;
+}
+
+html[data-theme="light"] .char-name {
+  color: #f5f0ff;
+}
+
+html[data-theme="light"] .char-class {
+  color: #00e5ff;
+}
+
+html[data-theme="light"] .char-stat-item .label {
+  color: #a79cbf;
+}
+
+html[data-theme="light"] .char-stat-item .val {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .arcade-instructions {
+  color: #a79cbf;
+}

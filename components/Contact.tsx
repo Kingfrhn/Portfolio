@@ -7,14 +7,14 @@ export default function Contact() {
     <>
       <section id="contact" className="contact-section">
         <div className="wrap">
-          <div className="eyebrow" style={{ justifyContent: 'center' }}>
-            Status: Serving Notice Period • Available soon ...
+          <div className="eyebrow" style={{ justifyContent: 'center', color: 'var(--pass)' }}>
+            Status: Serving Notice Period • Last Working Day (LWD): 9th October 2026
           </div>
 
           <h2>Let's Ship High-Quality, Stable Builds Together</h2>
 
           <p className="section-sub">
-            Actively seeking Manual Testing &amp; Senior QA Test Engineer roles in game testing or application software. Available for full-time employment, contract cycles, or technical QA interviews immediately.
+            Senior QA Test Engineer with 5+ years of experience. Currently serving notice period with <strong>Last Working Day (LWD): 9th October 2026</strong>. Actively seeking Manual Testing &amp; Senior QA Test Engineer roles in game testing or application software. Available for technical QA interviews and joining immediately upon release.
           </p>
 
           <div className="contact-actions">
@@ -52,8 +52,8 @@ export default function Contact() {
       </section>
 
       <footer className="wrap">
-        <span>© {new Date().getFullYear()} Omar Farahan Molla — Senior QA Test Engineer</span>
-        <span>Kolkata, India</span>
+        <span>© {new Date().getFullYear()} Omar Farahan Molla — Senior QA Test Engineer (5+ Years Exp)</span>
+        <span>Serving Notice Period • LWD: 9th October 2026 | Kolkata, India</span>
       </footer>
     </>
   );
