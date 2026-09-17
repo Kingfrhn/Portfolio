@@ -20,6 +20,7 @@ export default function SkillsCoverage() {
               <div className="coverage-bar-fill" style={{ width: '95%' }}></div>
             </div>
             <div className="tag-cloud">
+              <span className="tag">Manual Testing</span>
               <span className="tag">Functional Testing</span>
               <span className="tag">Regression Testing</span>
               <span className="tag">Exploratory Testing</span>
@@ -29,14 +30,18 @@ export default function SkillsCoverage() {
               <span className="tag">UI/UX Testing</span>
               <span className="tag">Compatibility Testing</span>
               <span className="tag">Cross-Platform Testing</span>
+              <span className="tag">Web &amp; Mobile Testing</span>
               <span className="tag">Test Case Design</span>
               <span className="tag">Test Execution</span>
               <span className="tag">Test Scenario Analysis</span>
               <span className="tag">Requirements Review</span>
               <span className="tag">Defect Lifecycle Management</span>
+              <span className="tag">Defect Tracking</span>
               <span className="tag">Defect Verification</span>
+              <span className="tag">Defect Validation</span>
               <span className="tag">Bug Reporting &amp; Documentation</span>
               <span className="tag">Retesting</span>
+              <span className="tag">User Acceptance Testing</span>
               <span className="tag">Release Validation</span>
               <span className="tag">Reproduction &amp; Issue Investigation</span>
             </div>
@@ -99,8 +104,13 @@ export default function SkillsCoverage() {
             </div>
             <div className="tag-cloud">
               <span className="tag">Selenium WebDriver (Basic)</span>
+              <span className="tag">TestNG</span>
+              <span className="tag">Appium</span>
               <span className="tag">Core Java</span>
               <span className="tag">FireFlink</span>
+              <span className="tag">Jenkins</span>
+              <span className="tag">Git</span>
+              <span className="tag">CI/CD</span>
               <span className="tag">Automation Framework Concepts</span>
               <span className="tag">Web &amp; Mobile Automation</span>
               <span className="tag">API Testing Concepts</span>
