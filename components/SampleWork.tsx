@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Bug, FileCheck, X, Terminal, ExternalLink } from 'lucide-react';
-import { retroSound } from '@/utils/audio';
+import { X } from 'lucide-react';
 
 interface BugDetail {
   id: string;
@@ -117,7 +116,6 @@ const webappBugs: BugDetail[] = [
 export default function SampleWork() {
   const [category, setCategory] = useState<'native' | 'webapp'>('native');
   const [panel, setPanel] = useState<'scenarios' | 'bugs'>('scenarios');
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedBug, setSelectedBug] = useState<BugDetail | null>(null);
 
   const activeBugs = category === 'native' ? nativeBugs : webappBugs;
@@ -128,27 +126,20 @@ export default function SampleWork() {
         <div className="eyebrow">Evidence &amp; Artifacts</div>
         <h2>Sample Test Cases &amp; Defect Reports</h2>
         <p className="section-sub">
-          Real hands-on QA artifacts from two complete test passes: a native multiplayer game title and a web application pass.
+          Real hands-on QA artifacts from two complete test passes: a native multiplayer application
+          title and a web application pass.
         </p>
 
         <div className="category-tabs">
           <button
             className={`category-tab-btn ${category === 'native' ? 'active' : ''}`}
-            onClick={() => {
-              retroSound.playSelect();
-              setCategory('native');
-              setSearchQuery('');
-            }}
+            onClick={() => { setCategory('native'); }}
           >
-            Native App · Game QA Pass
+            Native App · QA Pass
           </button>
           <button
             className={`category-tab-btn ${category === 'webapp' ? 'active' : ''}`}
-            onClick={() => {
-              retroSound.playSelect();
-              setCategory('webapp');
-              setSearchQuery('');
-            }}
+            onClick={() => { setCategory('webapp'); }}
           >
             Web App · Manual QA Pass
           </button>
@@ -158,19 +149,13 @@ export default function SampleWork() {
           <div className="sample-tabs">
             <button
               className={`sample-tab-btn ${panel === 'scenarios' ? 'active' : ''}`}
-              onClick={() => {
-                retroSound.playSelect();
-                setPanel('scenarios');
-              }}
+              onClick={() => setPanel('scenarios')}
             >
               Sample test cases
             </button>
             <button
               className={`sample-tab-btn ${panel === 'bugs' ? 'active' : ''}`}
-              onClick={() => {
-                retroSound.playSelect();
-                setPanel('bugs');
-              }}
+              onClick={() => setPanel('bugs')}
             >
               Sample bugs
             </button>
@@ -191,170 +176,124 @@ export default function SampleWork() {
                   <tbody>
                     {category === 'native' ? (
                       <>
-                        <tr className="tc-group">
-                          <td colSpan={4}>Easy Bot Mode — Execution Suite</td>
-                        </tr>
+                        <tr className="tc-group"><td colSpan={4}>Easy Bot Mode — Execution Suite</td></tr>
                         <tr>
                           <td className="tc-id">TC-01</td>
                           <td>Launch app, initialize engine, and check home UI rendering</td>
                           <td>Android &amp; Windows</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-02</td>
                           <td>Select Easy Bot mode and play full match from start to finish</td>
                           <td>Android &amp; Windows</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-03</td>
                           <td>Win match against Easy Bot and verify final score calculation</td>
                           <td>Android / PC</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-04</td>
                           <td>Lose match against Easy Bot and verify defeat screen display</td>
                           <td>Android / PC</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
 
-                        <tr className="tc-group">
-                          <td colSpan={4}>Hard Bot Mode — Execution Suite</td>
-                        </tr>
+                        <tr className="tc-group"><td colSpan={4}>Hard Bot Mode — Execution Suite</td></tr>
                         <tr>
                           <td className="tc-id">TC-05</td>
                           <td>Confirm AI difficulty scaling and reaction latency vs Easy Mode</td>
                           <td>Android &amp; Windows</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-06</td>
                           <td>Verify scoring multipliers and combo streak reset logic</td>
                           <td>Android &amp; Windows</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
 
-                        <tr className="tc-group">
-                          <td colSpan={4}>Multiplayer Cross-Platform Suite</td>
-                        </tr>
+                        <tr className="tc-group"><td colSpan={4}>Multiplayer Cross-Platform Suite</td></tr>
                         <tr>
                           <td className="tc-id">TC-07</td>
                           <td>Create multiplayer room lobby and wait for 2nd player to join</td>
                           <td>Android &amp; Windows</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-08</td>
                           <td>Execute Mobile vs Mobile online match session</td>
                           <td>Android vs Android</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-09</td>
                           <td>Execute Cross-Platform match (Desktop PC vs Android Mobile)</td>
                           <td>Windows vs Android</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-10</td>
                           <td>Simulate phone lock interrupt mid-multiplayer match</td>
                           <td>Android</td>
-                          <td className="tc-result">
-                            <span className="badge badge-fail">FAIL</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-fail">FAIL</span></td>
                         </tr>
                       </>
                     ) : (
                       <>
-                        <tr className="tc-group">
-                          <td colSpan={4}>Authentication &amp; Session Management</td>
-                        </tr>
+                        <tr className="tc-group"><td colSpan={4}>Authentication &amp; Session Management</td></tr>
                         <tr>
                           <td className="tc-id">TC-W1</td>
                           <td>Log in with valid email/password credentials</td>
                           <td>Chrome / Safari</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W2</td>
                           <td>Submit login with invalid password — verify error banner</td>
                           <td>Chrome / Firefox</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W3</td>
                           <td>Session persistence check on hard page reload</td>
                           <td>Chrome / Edge</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W4</td>
                           <td>Logout action clears local tokens and blocks back navigation</td>
                           <td>Chrome / Safari</td>
-                          <td className="tc-result">
-                            <span className="badge badge-fail">FAIL</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-fail">FAIL</span></td>
                         </tr>
 
-                        <tr className="tc-group">
-                          <td colSpan={4}>Task Operations &amp; Validation</td>
-                        </tr>
+                        <tr className="tc-group"><td colSpan={4}>Task Operations &amp; Validation</td></tr>
                         <tr>
                           <td className="tc-id">TC-W5</td>
                           <td>Create task with title, description, and priority tag</td>
                           <td>All Browsers</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W6</td>
                           <td>Set due date on task and save changes</td>
                           <td>Chrome / Firefox</td>
-                          <td className="tc-result">
-                            <span className="badge badge-fail">FAIL</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-fail">FAIL</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W7</td>
                           <td>Search task feed by keyword query</td>
                           <td>All Browsers</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                         <tr>
                           <td className="tc-id">TC-W8</td>
                           <td>Filter task feed by status tag (Completed, In Progress)</td>
                           <td>All Browsers</td>
-                          <td className="tc-result">
-                            <span className="badge badge-pass">PASS</span>
-                          </td>
+                          <td className="tc-result"><span className="badge badge-pass">PASS</span></td>
                         </tr>
                       </>
                     )}
@@ -370,10 +309,7 @@ export default function SampleWork() {
                 <div
                   className="bug-card"
                   key={bug.id}
-                  onClick={() => {
-                    retroSound.playSelect();
-                    setSelectedBug(bug);
-                  }}
+                  onClick={() => setSelectedBug(bug)}
                 >
                   <div className="bug-top">
                     <span className="bug-id">{bug.id}</span>
@@ -393,11 +329,11 @@ export default function SampleWork() {
                         marginLeft: 'auto',
                         fontFamily: 'var(--font-mono)',
                         fontSize: '11.5px',
-                        color: 'var(--pass)',
+                        color: 'var(--teal)',
                         cursor: 'pointer',
                       }}
                     >
-                      Click to inspect report ↗
+                      View report ↗
                     </span>
                   </div>
 
@@ -419,28 +355,16 @@ export default function SampleWork() {
           )}
         </div>
 
-        {/* Modal Inspector */}
+        {/* Bug Detail Modal */}
         {selectedBug && (
           <div className="modal-overlay" onClick={() => setSelectedBug(null)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button
-                className="modal-close"
-                onClick={() => setSelectedBug(null)}
-              >
+              <button className="modal-close" onClick={() => setSelectedBug(null)}>
                 <X size={18} />
               </button>
 
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  marginBottom: '16px',
-                }}
-              >
-                <span className="bug-id" style={{ fontSize: '14px' }}>
-                  {selectedBug.id}
-                </span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                <span className="bug-id" style={{ fontSize: '14px' }}>{selectedBug.id}</span>
                 <span
                   className={`badge ${
                     selectedBug.severityType === 'blocker'
@@ -454,89 +378,52 @@ export default function SampleWork() {
                 </span>
               </div>
 
-              <h3
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '20px',
-                  marginBottom: '20px',
-                }}
-              >
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '20px', letterSpacing: '-0.01em' }}>
                 {selectedBug.title}
               </h3>
 
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                  fontSize: '14px',
-                  color: 'var(--text-dim)',
-                }}
-              >
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '14px', color: 'var(--text-dim)' }}>
                 <div>
-                  <div className="label" style={{ color: 'var(--text-faint)' }}>
-                    STEPS TO REPRODUCE
+                  <div className="label" style={{ color: 'var(--text-faint)', fontFamily: 'var(--font-mono)', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '6px' }}>
+                    Steps to Reproduce
                   </div>
-                  <pre
-                    style={{
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '12.5px',
-                      background: 'var(--surface-2)',
-                      padding: '12px',
-                      borderRadius: '6px',
-                      whiteSpace: 'pre-wrap',
-                      color: 'var(--text)',
-                      marginTop: '6px',
-                    }}
-                  >
+                  <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12.5px', background: 'var(--surface-2)', padding: '12px', borderRadius: '8px', whiteSpace: 'pre-wrap', color: 'var(--text)', marginTop: '4px', border: '1px solid var(--border)' }}>
                     {selectedBug.steps}
                   </pre>
                 </div>
 
                 <div>
-                  <div className="label" style={{ color: 'var(--bug)' }}>
-                    ACTUAL OBSERVED BEHAVIOR
+                  <div className="label" style={{ color: 'var(--fail)', fontFamily: 'var(--font-mono)', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>
+                    Actual Observed Behavior
                   </div>
-                  <p style={{ marginTop: '4px', color: 'var(--text)' }}>
-                    {selectedBug.actual}
-                  </p>
+                  <p style={{ marginTop: '4px', color: 'var(--text)' }}>{selectedBug.actual}</p>
                 </div>
 
                 <div>
-                  <div className="label" style={{ color: 'var(--pass)' }}>
-                    EXPECTED CORRECT BEHAVIOR
+                  <div className="label" style={{ color: 'var(--pass)', fontFamily: 'var(--font-mono)', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>
+                    Expected Correct Behavior
                   </div>
-                  <p style={{ marginTop: '4px', color: 'var(--text)' }}>
-                    {selectedBug.expected}
-                  </p>
+                  <p style={{ marginTop: '4px', color: 'var(--text)' }}>{selectedBug.expected}</p>
                 </div>
 
                 <div>
-                  <div className="label">TEST ENVIRONMENT &amp; REPRO RATE</div>
+                  <div className="label" style={{ fontFamily: 'var(--font-mono)', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '4px' }}>
+                    Test Environment &amp; Repro Rate
+                  </div>
                   <p style={{ marginTop: '4px' }}>{selectedBug.environment}</p>
-                  <p style={{ color: 'var(--warn)', fontWeight: 500 }}>
-                    Reproduction Rate: {selectedBug.reproRate}
-                  </p>
+                  <p style={{ color: 'var(--warn)', fontWeight: 500 }}>Reproduction Rate: {selectedBug.reproRate}</p>
                 </div>
 
-                <div>
-                  <div className="label" style={{ color: 'var(--accent)' }}>
-                    ATTACHMENTS
+                {selectedBug.logSnippet && (
+                  <div>
+                    <div className="label" style={{ color: 'var(--teal)', fontFamily: 'var(--font-mono)', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '6px' }}>
+                      Log / Stack Trace
+                    </div>
+                    <pre style={{ background: '#090c10', border: '1px solid var(--border)', padding: '14px', borderRadius: '8px', fontFamily: 'var(--font-mono)', fontSize: '11.5px', color: '#7ee787', whiteSpace: 'pre-wrap', marginTop: '4px' }}>
+                      {selectedBug.logSnippet}
+                    </pre>
                   </div>
-                  <div
-                    style={{
-                      background: '#090c10',
-                      border: '1px solid var(--border)',
-                      padding: '12px',
-                      borderRadius: '6px',
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: '12px',
-                      color: 'var(--text-faint)',
-                      marginTop: '6px',
-                      minHeight: '38px',
-                    }}
-                  />
-                </div>
+                )}
               </div>
             </div>
           </div>

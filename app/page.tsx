@@ -13,24 +13,24 @@ import Contact from '@/components/Contact';
 import ArcadeTitleScreen from '@/components/ArcadeTitleScreen';
 
 export default function Home() {
-  const [gameStarted, setGameStarted] = useState(false);
+  const [splashDone, setSplashDone] = useState(false);
 
-  const handleStartGame = () => {
-    setGameStarted(true);
+  const handleEnter = () => {
+    setSplashDone(true);
   };
 
-  const handleResetGame = () => {
-    setGameStarted(false);
+  const handleReset = () => {
+    setSplashDone(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <main>
-      {!gameStarted && (
-        <ArcadeTitleScreen onStart={handleStartGame} />
+      {!splashDone && (
+        <ArcadeTitleScreen onStart={handleEnter} />
       )}
 
-      <Header onResetGame={handleResetGame} />
+      <Header onResetGame={handleReset} />
       <Hero />
       <Experience />
       <Projects />

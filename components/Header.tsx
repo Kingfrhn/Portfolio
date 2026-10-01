@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Mail, Download, Menu, X, CheckCircle, Volume2, VolumeX, RotateCcw, Sun, Moon, Monitor } from 'lucide-react';
-import { retroSound } from '@/utils/audio';
+import { Mail, Download, Menu, X, CheckCircle, Sun, Moon, Monitor } from 'lucide-react';
 
 interface HeaderProps {
   onResetGame?: () => void;
@@ -12,14 +11,15 @@ type ThemeMode = 'dark' | 'light' | 'system';
 
 export default function Header({ onResetGame }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
+  const [themeMode, setThemeMode] = useState<ThemeMode>('light');
 
   useEffect(() => {
     const saved = localStorage.getItem('omar_portfolio_theme') as ThemeMode | null;
     if (saved && ['dark', 'light', 'system'].includes(saved)) {
       setThemeMode(saved);
       applyTheme(saved);
+    } else {
+      applyTheme('light');
     }
   }, []);
 
@@ -33,7 +33,6 @@ export default function Header({ onResetGame }: HeaderProps) {
   };
 
   const cycleTheme = () => {
-    retroSound.playSelect();
     const nextTheme: Record<ThemeMode, ThemeMode> = {
       dark: 'light',
       light: 'system',
@@ -45,26 +44,10 @@ export default function Header({ onResetGame }: HeaderProps) {
     applyTheme(next);
   };
 
-  const toggleMenu = () => {
-    retroSound.playSelect();
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const toggleAudio = () => {
-    const muted = retroSound.toggleMute();
-    setIsMuted(muted);
-    if (!muted) {
-      retroSound.playCoin();
-    }
-  };
-
-  const handleNavClick = () => {
-    retroSound.playSelect();
-  };
+  const closeMenu = () => setMobileMenuOpen(false);
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    retroSound.playCoin();
     if (onResetGame) {
       onResetGame();
     } else {
@@ -75,57 +58,35 @@ export default function Header({ onResetGame }: HeaderProps) {
   return (
     <header>
       <div className="wrap nav">
-        <a href="#" className="logo" onClick={handleLogoClick} title="Return to Arcade Title Screen">
-          <span className="dot"></span><span className="logo-full">PRESS START // OMAR</span><span className="logo-short">OMAR</span>
+        <a href="#" className="logo" onClick={handleLogoClick} aria-label="Back to top">
+          <span className="dot" />
+          <span className="logo-full">Omar Farahan Molla // QA Engineer</span>
+          <span className="logo-short">Omar · QA</span>
         </a>
 
         <nav className="links">
-          <a href="#experience" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Experience</a>
-          <a href="#projects" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Projects</a>
-          <a href="#skills" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Coverage</a>
-          <a href="#sample-work" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Sample work</a>
-          <a href="#terminal" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Playground</a>
-          <a href="#education" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Training</a>
-          <a href="#contact" onClick={handleNavClick} onMouseEnter={() => retroSound.playSelect()}>Contact</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#sample-work">Sample Work</a>
+          <a href="#terminal">CLI</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div className="nav-actions">
-          {/* Theme Mode Switcher */}
           <button
             className="btn btn-icon"
             onClick={cycleTheme}
-            title={`Current Theme: ${themeMode.toUpperCase()} (Click to switch)`}
-            aria-label="Switch theme mode"
+            title={`Theme: ${themeMode} — click to cycle`}
+            aria-label="Switch theme"
           >
             {themeMode === 'dark' && <Moon size={15} />}
             {themeMode === 'light' && <Sun size={15} />}
             {themeMode === 'system' && <Monitor size={15} />}
           </button>
 
-          {onResetGame && (
-            <button
-              className="btn btn-icon"
-              onClick={onResetGame}
-              title="Arcade Title Screen / Insert Coin"
-              aria-label="Arcade title screen"
-            >
-              <RotateCcw size={15} />
-            </button>
-          )}
-          <button
-            className="btn btn-icon"
-            onClick={toggleAudio}
-            title={isMuted ? "Enable 8-Bit Arcade Sound" : "Mute Sound"}
-            aria-label="Toggle retro audio"
-            style={{ color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
-          >
-            {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
-          </button>
-          <a
-            className="btn btn-text"
-            href="mailto:omrfrhn@gmail.com"
-            onClick={handleNavClick}
-          >
+          <a className="btn btn-text" href="mailto:omrfrhn@gmail.com">
             <Mail size={14} /> Email
           </a>
           <a
@@ -133,22 +94,21 @@ export default function Header({ onResetGame }: HeaderProps) {
             href="/resume.pdf"
             download="Omar_Farahan_Molla_Resume.pdf"
             title="Download PDF Resume"
-            onClick={() => retroSound.playCoin()}
           >
             <Download size={14} /> Resume
           </a>
           <a
             className="btn btn-solid"
             href="#contact"
-            onClick={handleNavClick}
             title="Serving Notice Period — LWD: 9th October 2026"
           >
-            <CheckCircle size={14} /> Notice (LWD: 9 Oct 2026)
+            <CheckCircle size={14} /> Available Oct 2026
           </a>
+
           <button
             className="menu-toggle"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -157,28 +117,14 @@ export default function Header({ onResetGame }: HeaderProps) {
 
       {mobileMenuOpen && (
         <div className="mobile-drawer">
-          <a href="#experience" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Experience <span>▸</span>
-          </a>
-          <a href="#projects" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Projects <span>▸</span>
-          </a>
-          <a href="#skills" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Coverage <span>▸</span>
-          </a>
-          <a href="#sample-work" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Sample work <span>▸</span>
-          </a>
-          <a href="#terminal" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            CLI Playground <span>▸</span>
-          </a>
-          <a href="#education" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Training <span>▸</span>
-          </a>
-          <a href="#contact" onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}>
-            Contact <span>▸</span>
-          </a>
-          
+          <a href="#experience" onClick={closeMenu}>Experience <span>▸</span></a>
+          <a href="#projects" onClick={closeMenu}>Projects <span>▸</span></a>
+          <a href="#skills" onClick={closeMenu}>Skills <span>▸</span></a>
+          <a href="#sample-work" onClick={closeMenu}>Sample Work <span>▸</span></a>
+          <a href="#terminal" onClick={closeMenu}>CLI Playground <span>▸</span></a>
+          <a href="#education" onClick={closeMenu}>Education <span>▸</span></a>
+          <a href="#contact" onClick={closeMenu}>Contact <span>▸</span></a>
+
           <div className="mobile-drawer-actions">
             <div className="mobile-action-row">
               <button
@@ -186,39 +132,19 @@ export default function Header({ onResetGame }: HeaderProps) {
                 style={{ flex: 1, justifyContent: 'center' }}
                 onClick={cycleTheme}
               >
-                {themeMode === 'dark' && <Moon size={15} />}
-                {themeMode === 'light' && <Sun size={15} />}
-                {themeMode === 'system' && <Monitor size={15} />}
+                {themeMode === 'dark' && <Moon size={14} />}
+                {themeMode === 'light' && <Sun size={14} />}
+                {themeMode === 'system' && <Monitor size={14} />}
                 Theme: {themeMode.toUpperCase()}
               </button>
-              <button
-                className="btn"
-                onClick={toggleAudio}
-                style={{ color: isMuted ? 'var(--text-faint)' : 'var(--pass)' }}
-              >
-                {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
-                {isMuted ? 'Muted' : 'Audio On'}
-              </button>
-            </div>
-            
-            <div className="mobile-action-row">
               <a
                 className="btn"
                 style={{ flex: 1, justifyContent: 'center' }}
                 href="mailto:omrfrhn@gmail.com"
-                onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}
+                onClick={closeMenu}
               >
                 <Mail size={14} /> Email Me
               </a>
-              {onResetGame && (
-                <button
-                  className="btn"
-                  onClick={() => { setMobileMenuOpen(false); onResetGame(); }}
-                  style={{ color: 'var(--warn)' }}
-                >
-                  <RotateCcw size={15} /> Arcade
-                </button>
-              )}
             </div>
 
             <a
@@ -226,18 +152,18 @@ export default function Header({ onResetGame }: HeaderProps) {
               style={{ width: '100%', justifyContent: 'center' }}
               href="/resume.pdf"
               download="Omar_Farahan_Molla_Resume.pdf"
-              onClick={() => { setMobileMenuOpen(false); retroSound.playCoin(); }}
+              onClick={closeMenu}
             >
               <Download size={14} /> Download Resume PDF
             </a>
-            
+
             <a
               className="btn"
               style={{ width: '100%', justifyContent: 'center', borderColor: 'var(--pass)', color: 'var(--pass)' }}
               href="#contact"
-              onClick={() => { setMobileMenuOpen(false); handleNavClick(); }}
+              onClick={closeMenu}
             >
-              <CheckCircle size={14} /> Serving Notice (LWD: 9th Oct 2026)
+              <CheckCircle size={14} /> Notice Period · LWD: 9th Oct 2026
             </a>
           </div>
         </div>

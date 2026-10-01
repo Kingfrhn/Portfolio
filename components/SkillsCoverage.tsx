@@ -7,17 +7,18 @@ export default function SkillsCoverage() {
         <div className="eyebrow">Test coverage</div>
         <h2>Skills &amp; Competencies</h2>
         <p className="section-sub">
-          Deep domain expertise in manual testing, cross-platform mobile/console debugging, combined with active automation upskilling in Java &amp; Selenium.
+          Deep domain expertise in manual testing, cross-platform mobile/console debugging, combined
+          with active automation upskilling in Java &amp; Selenium.
         </p>
 
         <div className="coverage-grid">
           <div className="coverage-group">
             <h3>
-              <span>QA &amp; Testing &amp; Activities</span>
+              <span>QA &amp; Testing Activities</span>
               <span style={{ color: 'var(--pass)' }}>95%</span>
             </h3>
             <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '95%' }}></div>
+              <div className="coverage-bar-fill" style={{ width: '95%' }} />
             </div>
             <div className="tag-cloud">
               <span className="tag">Manual Testing</span>
@@ -53,7 +54,7 @@ export default function SkillsCoverage() {
               <span style={{ color: 'var(--pass)' }}>92%</span>
             </h3>
             <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '92%' }}></div>
+              <div className="coverage-bar-fill" style={{ width: '92%' }} />
             </div>
             <div className="tag-cloud">
               <span className="tag">Jira</span>
@@ -81,7 +82,7 @@ export default function SkillsCoverage() {
               <span style={{ color: 'var(--pass)' }}>90%</span>
             </h3>
             <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '90%' }}></div>
+              <div className="coverage-bar-fill" style={{ width: '90%' }} />
             </div>
             <div className="tag-cloud">
               <span className="tag">Hardware &amp; Peripheral Troubleshooting</span>
@@ -100,7 +101,7 @@ export default function SkillsCoverage() {
               <span style={{ color: 'var(--warn)' }}>45%</span>
             </h3>
             <div className="coverage-bar-track">
-              <div className="coverage-bar-fill" style={{ width: '45%' }}></div>
+              <div className="coverage-bar-fill" style={{ width: '45%' }} />
             </div>
             <div className="tag-cloud">
               <span className="tag">Selenium WebDriver (Basic)</span>
