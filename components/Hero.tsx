@@ -1,7 +1,6 @@
 'use client';
 
-import { Mail, Download, Linkedin, Github, Gamepad2, Briefcase, MapPin } from 'lucide-react';
-import { retroSound } from '@/utils/audio';
+import { Mail, Download, Linkedin, Github, Briefcase, MapPin, Clock } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -10,12 +9,8 @@ export default function Hero() {
         <div className="hero-grid">
           <div>
             <div className="status-line">
-              <span style={{ color: 'var(--warn)' }}>1UP: 084700</span>{' '}
-              <span className="sep">▸</span> HIGH SCORE:{' '}
-              <span style={{ color: 'var(--pass)' }}>999990</span>{' '}
-              <span className="sep">▸</span> STAGE: <span style={{ color: 'var(--accent)' }}>QA MASTER</span>{' '}
-              <span className="sep">▸</span> LIVES: <span style={{ color: 'var(--bug)' }}>❤ ❤ ❤</span>
-              <span className="cursor"></span>
+              <span className="dot-status" />
+              Open to Opportunities &nbsp;·&nbsp; Serving Notice Period &nbsp;·&nbsp; LWD: 9th October 2026
             </div>
 
             <h1>Omar Farahan Molla</h1>
@@ -25,7 +20,7 @@ export default function Hero() {
                 <Briefcase size={15} style={{ color: 'var(--accent)' }} /> Senior QA Test Engineer
               </span>
               <span className="role-tag">
-                <Gamepad2 size={15} style={{ color: 'var(--pass)' }} /> Game &amp; Application Testing
+                <Clock size={15} style={{ color: 'var(--pass)' }} /> 5+ Years Experience
               </span>
               <span className="role-tag">
                 <MapPin size={15} style={{ color: 'var(--warn)' }} /> Kolkata, India
@@ -33,7 +28,10 @@ export default function Hero() {
             </div>
 
             <p className="bio">
-              I break builds before players do. 5+ years testing games and applications across mobile, console, PC, and web, running functional, regression, exploratory, and cross-platform cycles for global studios including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently serving notice period (LWD: 9th October 2026) and actively looking for Manual Testing &amp; Senior QA Engineer roles.
+              Manual QA specialist with 5+ years testing software across mobile, console, PC, and web platforms.
+              Experienced in functional, regression, exploratory, and cross-platform test cycles for global studios
+              including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently serving notice period
+              (LWD: 9th October 2026) and actively seeking Manual Testing &amp; Senior QA Engineer roles.
             </p>
 
             <div className="hero-actions">
@@ -41,15 +39,10 @@ export default function Hero() {
                 className="btn btn-solid"
                 href="/resume.pdf"
                 download="Omar_Farahan_Molla_Resume.pdf"
-                onClick={() => retroSound.playCoin()}
               >
                 <Download size={15} /> Download Resume PDF
               </a>
-              <a 
-                className="btn" 
-                href="mailto:omrfrhn@gmail.com"
-                onClick={() => retroSound.playSelect()}
-              >
+              <a className="btn" href="mailto:omrfrhn@gmail.com">
                 <Mail size={15} /> Get in touch
               </a>
               <a
@@ -57,7 +50,6 @@ export default function Hero() {
                 href="https://linkedin.com/in/omrfrhn"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => retroSound.playSelect()}
               >
                 <Linkedin size={15} /> LinkedIn ↗
               </a>
@@ -66,7 +58,6 @@ export default function Hero() {
                 href="https://github.com/Kingfrhn"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => retroSound.playSelect()}
               >
                 <Github size={15} /> GitHub ↗
               </a>
@@ -80,8 +71,8 @@ export default function Hero() {
                 alt="Omar Farahan Molla — Senior QA Test Engineer"
               />
               <div className="profile-card-badge">
-                <Gamepad2 size={16} style={{ color: 'var(--pass)', flexShrink: 0 }} />
-                <span>NOTICE PERIOD • LWD: 9th Oct 2026</span>
+                <Briefcase size={14} style={{ color: 'var(--teal)', flexShrink: 0 }} />
+                <span>Notice Period · LWD: 9th Oct 2026</span>
               </div>
             </div>
           </div>
@@ -89,27 +80,19 @@ export default function Hero() {
 
         <div className="stats">
           <div className="stat">
-            <div className="num">
-              5<span className="unit">yrs+</span>
-            </div>
+            <div className="num">5<span className="unit">yrs+</span></div>
             <div className="label">QA experience</div>
           </div>
           <div className="stat">
-            <div className="num">
-              600<span className="unit">+</span>
-            </div>
+            <div className="num">600<span className="unit">+</span></div>
             <div className="label">Test cases written</div>
           </div>
           <div className="stat">
-            <div className="num">
-              900<span className="unit">+</span>
-            </div>
+            <div className="num">900<span className="unit">+</span></div>
             <div className="label">Bugs logged in Jira</div>
           </div>
           <div className="stat">
-            <div className="num">
-              8<span className="unit">plat.</span>
-            </div>
+            <div className="num">8<span className="unit">plat.</span></div>
             <div className="label">Platforms covered</div>
           </div>
         </div>

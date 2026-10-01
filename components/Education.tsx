@@ -4,8 +4,8 @@ export default function Education() {
   return (
     <section id="education">
       <div className="wrap">
-        <div className="eyebrow">Build history</div>
-        <h2>Education &amp; Training</h2>
+        <div className="eyebrow">Education &amp; Training</div>
+        <h2>Qualifications</h2>
         <p className="section-sub">
           Academic computer science foundation paired with continuous SDET automation upskilling.
         </p>
@@ -16,7 +16,8 @@ export default function Education() {
             <h4>Software Testing with Java Automation (SDET)</h4>
             <div className="edu-meta">QSpiders · Kolkata, India</div>
             <p>
-              Core Java Fundamentals, Selenium WebDriver, Automation Framework Concepts, and Web &amp; Mobile Automation using FireFlink.
+              Core Java Fundamentals, Selenium WebDriver, Automation Framework Concepts, and Web &amp;
+              Mobile Automation using FireFlink.
             </p>
           </div>
 
@@ -25,7 +26,8 @@ export default function Education() {
             <h4>CCNA Training</h4>
             <div className="edu-meta">Evision Technoserve · Kolkata, India</div>
             <p>
-              TCP/IP, Routing &amp; Switching, VLAN, DNS, DHCP, Virtualization, AD DS, OSPF, and Network Troubleshooting.
+              TCP/IP, Routing &amp; Switching, VLAN, DNS, DHCP, Virtualization, AD DS, OSPF, and Network
+              Troubleshooting.
             </p>
           </div>
 
@@ -46,12 +48,10 @@ export default function Education() {
             <div className="edu-meta">
               RRK Government Polytechnic · 08/2015 → 06/2018 · Midnapore, West Bengal, India
             </div>
-            <p>
-              Foundational engineering polytechnic technical diploma.
-            </p>
+            <p>Foundational engineering polytechnic technical diploma.</p>
           </div>
 
-          <div className="edu-card" style={{ gridColumn: 'span 1' }}>
+          <div className="edu-card">
             <span className="badge badge-pass">CERTIFIED</span>
             <h4>Certifications &amp; Workshops</h4>
             <div className="edu-meta">Be10X, Google, Cisco</div>
