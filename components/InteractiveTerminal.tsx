@@ -35,13 +35,13 @@ export default function InteractiveTerminal() {
     if (trimmed === 'help') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'Available commands:\n  status   — View availability & notice period\n  skills   — List top QA skills & tools\n  bugs     — Show career metrics\n  contact  — Output contact details\n  download — Trigger resume PDF download\n  clear    — Clear terminal',
+        text: 'Available commands:\n  status   — View availability & current status\n  skills   — List top QA skills & tools\n  bugs     — Show career metrics\n  contact  — Output contact details\n  download — Trigger resume PDF download\n  clear    — Clear terminal',
         type: 'output',
       });
     } else if (trimmed === 'status') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'STATUS: Serving Notice Period (LWD: 9th October 2026)\nSEEKING: Manual Testing & Senior QA Engineer Roles\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 5+ Years — Senior QA Test Engineer',
+        text: 'STATUS: Immediate Joiner\nSEEKING: Manual Testing & Senior QA Engineer Roles\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 5+ Years — Senior QA Test Engineer',
         type: 'success',
       });
     } else if (trimmed === 'skills') {

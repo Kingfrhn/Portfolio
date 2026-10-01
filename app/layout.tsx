@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Omar Farahan Molla — Senior QA Test Engineer',
   description:
-    'Senior QA Test Engineer with 5+ years of experience in manual testing, functional, regression, and exploratory testing across mobile, console, PC, and web platforms. Currently serving notice period (LWD: 9th October 2026).',
+    'Senior QA Test Engineer with 5+ years of experience in manual testing, functional, regression, and exploratory testing across mobile, console, PC, and web platforms. Immediate joiner.',
   keywords: [
     'Omar Farahan Molla',
     'QA Test Engineer',

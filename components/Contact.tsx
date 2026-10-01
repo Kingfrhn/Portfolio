@@ -8,14 +8,14 @@ export default function Contact() {
       <section id="contact" className="contact-section">
         <div className="wrap">
           <div className="eyebrow">
-            Status: Serving Notice Period · Last Working Day: 9th October 2026
+            Status: Immediate Joiner
           </div>
 
           <h2>Let&apos;s Ship High-Quality, Stable Releases Together</h2>
 
           <p className="section-sub">
-            Senior QA Test Engineer with 5+ years of experience. Currently serving notice period with{' '}
-            <strong>Last Working Day (LWD): 9th October 2026</strong>. Actively seeking Manual Testing
+            Senior QA Test Engineer with 5+ years of experience. Currently available as an{' '}
+            <strong>Immediate Joiner</strong>. Actively seeking Manual Testing
             &amp; Senior QA Test Engineer roles. Available for technical QA interviews and joining
             immediately upon release.
           </p>
@@ -52,7 +52,7 @@ export default function Contact() {
 
       <footer className="wrap">
         <span>© {new Date().getFullYear()} Omar Farahan Molla — Senior QA Test Engineer (5+ Years Exp)</span>
-        <span>Serving Notice Period · LWD: 9th October 2026 | Kolkata, India</span>
+        <span>Immediate Joiner | Kolkata, India</span>
       </footer>
     </>
   );

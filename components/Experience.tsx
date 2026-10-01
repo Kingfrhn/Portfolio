@@ -43,7 +43,7 @@ export default function Experience() {
 
           <div className="log-entry">
             <div className="log-meta">
-              08/2021 <span className="sep">→</span> 08/2022{' '}
+              09/2021 <span className="sep">→</span> 07/2022{' '}
               <span className="badge badge-pass">Completed</span>
             </div>
             <div className="log-title">Test Engineer</div>

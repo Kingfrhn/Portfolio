@@ -10,7 +10,7 @@ export default function Hero() {
           <div>
             <div className="status-line">
               <span className="dot-status" />
-              Open to Opportunities &nbsp;·&nbsp; Serving Notice Period &nbsp;·&nbsp; LWD: 9th October 2026
+              Open to Opportunities &nbsp;·&nbsp; Immediate Joiner
             </div>
 
             <h1>Omar Farahan Molla</h1>
@@ -30,8 +30,8 @@ export default function Hero() {
             <p className="bio">
               Manual QA specialist with 5+ years testing software across mobile, console, PC, and web platforms.
               Experienced in functional, regression, exploratory, and cross-platform test cycles for global studios
-              including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently serving notice period
-              (LWD: 9th October 2026) and actively seeking Manual Testing &amp; Senior QA Engineer roles.
+              including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently available as an
+              immediate joiner and actively seeking Manual Testing &amp; Senior QA Engineer roles.
             </p>
 
             <div className="hero-actions">
@@ -72,7 +72,7 @@ export default function Hero() {
               />
               <div className="profile-card-badge">
                 <Briefcase size={14} style={{ color: 'var(--teal)', flexShrink: 0 }} />
-                <span>Notice Period · LWD: 9th Oct 2026</span>
+                <span>Immediate Joiner</span>
               </div>
             </div>
           </div>

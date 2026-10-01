@@ -100,9 +100,9 @@ export default function Header({ onResetGame }: HeaderProps) {
           <a
             className="btn btn-solid"
             href="#contact"
-            title="Serving Notice Period — LWD: 9th October 2026"
+            title="Available as an Immediate Joiner"
           >
-            <CheckCircle size={14} /> Available Oct 2026
+            <CheckCircle size={14} /> Immediate Joiner
           </a>
 
           <button
@@ -121,7 +121,7 @@ export default function Header({ onResetGame }: HeaderProps) {
           <a href="#projects" onClick={closeMenu}>Projects <span>▸</span></a>
           <a href="#skills" onClick={closeMenu}>Skills <span>▸</span></a>
           <a href="#sample-work" onClick={closeMenu}>Sample Work <span>▸</span></a>
-          <a href="#terminal" onClick={closeMenu}>CLI Playground <span>▸</span></a>
+          <a href="#terminal" onClick={closeMenu}>CLI <span>▸</span></a>
           <a href="#education" onClick={closeMenu}>Education <span>▸</span></a>
           <a href="#contact" onClick={closeMenu}>Contact <span>▸</span></a>
 
@@ -163,7 +163,7 @@ export default function Header({ onResetGame }: HeaderProps) {
               href="#contact"
               onClick={closeMenu}
             >
-              <CheckCircle size={14} /> Notice Period · LWD: 9th Oct 2026
+              <CheckCircle size={14} /> Immediate Joiner
             </a>
           </div>
         </div>

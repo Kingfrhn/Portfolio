@@ -45,7 +45,7 @@ export default function ArcadeTitleScreen({ onStart }: ArcadeTitleScreenProps) {
               <span>Exp:</span> 5+ Years
             </div>
             <div className="qa-splash-meta-item">
-              <span>Status:</span> Serving Notice · LWD: 9 Oct 2026
+              <span>Status:</span> Immediate Joiner
             </div>
             <div className="qa-splash-meta-item">
               <span>Based:</span> Kolkata, India
