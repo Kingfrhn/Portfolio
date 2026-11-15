@@ -41,13 +41,13 @@ export default function InteractiveTerminal() {
     } else if (trimmed === 'status') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'STATUS: Immediate Joiner\nSEEKING: Manual Testing & Senior QA Engineer Roles\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 5+ Years — Senior QA Test Engineer',
+        text: 'STATUS: Immediate Joiner\nSEEKING: Manual Testing & Senior QA Engineer Roles\nLOCATION: Kolkata / Remote / Open to Relocation\nEXPERIENCE: 5+ Years QA & AI Product Evaluation',
         type: 'success',
       });
     } else if (trimmed === 'skills') {
       newHistory.push({
         id: Date.now() + 1,
-        text: 'SKILLS: Functional, Regression, Exploratory, Smoke & Sanity, UI/UX, Cross-Platform Testing\nTOOLS: Jira, TestRail, ADB, Android Logcat, Charles Proxy, Android Studio\nUPSKILLING: Core Java, Selenium WebDriver, FireFlink, Postman API',
+        text: 'SKILLS: Functional, Regression, Exploratory, Smoke & Sanity, Cross-Platform Testing, AI Chat & Search Evaluation\nTOOLS: Jira, TestRail, Charles Proxy, ADB, Android Logcat, Android Studio, Postman, Selenium\nUPSKILLING: SQL, Core Java, API Testing Concepts, SDLC/STLC',
         type: 'output',
       });
     } else if (trimmed === 'bugs') {

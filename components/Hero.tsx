@@ -28,10 +28,11 @@ export default function Hero() {
             </div>
 
             <p className="bio">
-              Manual QA specialist with 5+ years testing software across mobile, console, PC, and web platforms.
-              Experienced in functional, regression, exploratory, and cross-platform test cycles for global studios
-              including King, Scopely, Bandai Namco, Microids, and Eidos Montreal. Currently available as an
-              immediate joiner and actively seeking Manual Testing &amp; Senior QA Engineer roles.
+              Manual QA professional with 5+ years of experience testing games and applications across mobile, web, PC, and
+              console platforms. Skilled in functional, regression, exploratory, and compatibility testing, test case design,
+              defect tracking, and release validation for global studios including King, Scopely, Bandai Namco, Microids, and
+              Eidos Montreal. Also experienced in evaluating AI chat and search tools through structured testing tasks.
+              Currently available as an immediate joiner and actively seeking Manual Testing &amp; Senior QA Engineer roles.
             </p>
 
             <div className="hero-actions">
