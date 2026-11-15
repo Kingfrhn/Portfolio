@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, MapPin } from 'lucide-react';
+import { Building2, MapPin, Bot, Sparkles, Globe } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -9,15 +9,16 @@ export default function Experience() {
         <div className="eyebrow">Work History</div>
         <h2>Experience</h2>
         <p className="section-sub">
-          5+ years of continuous QA execution, steadily scaling from test execution to leading
-          multi-platform test cycles for global studios.
+          5+ years of QA game and application testing across mobile, web, PC, and console platforms,
+          alongside active AI product evaluation.
         </p>
 
         <div className="log">
+          {/* Senior Test Engineer */}
           <div className="log-entry">
             <div className="log-meta">
-              08/2022 <span className="sep">→</span> Present{' '}
-              <span className="badge badge-current">Current Role</span>
+              08/2022 <span className="sep">→</span> 10/2026{' '}
+              <span className="badge badge-pass">Completed</span>
             </div>
             <div className="log-title">Senior Test Engineer</div>
             <div className="log-company">
@@ -30,17 +31,17 @@ export default function Experience() {
               </span>
             </div>
             <ul className="log-list">
-              <li>Led a team of 5–8 testers and coordinated daily QA activities during multi-platform testing cycles.</li>
-              <li>Designed and executed functional and regression test cases to validate feature stability before release.</li>
-              <li>Logged and tracked defects in Jira with detailed reproduction steps, logs, and screenshots.</li>
-              <li>Performed functional, regression, exploratory, UI/UX, compatibility, and cross-platform testing across mobile, web, PC, and console platforms.</li>
-              <li>Retested fixes, performed regression validation, and collaborated with developers to investigate and resolve defects.</li>
-              <li>Used ADB, Logcat, Charles Proxy, and Android Studio for crash, network, and software issue investigation.</li>
-              <li>Reviewed requirements for testability and risk areas and provided QA feedback during development.</li>
-              <li>Supported QA environments with basic hardware, peripheral, software, device, and LAN/Wi-Fi troubleshooting.</li>
+              <li>Coordinated 5–8 QA testers and managed daily testing activities.</li>
+              <li>Designed and executed test cases across mobile, web, PC and console platforms.</li>
+              <li>Performed functional, regression, exploratory, compatibility, smoke and sanity testing.</li>
+              <li>Reported, tracked and retested defects using Jira.</li>
+              <li>Used Charles Proxy, ADB, Logcat and Android Studio for issue investigation.</li>
+              <li>Prepared test reports and collaborated with development teams to resolve issues.</li>
+              <li>Supported feature validation and release testing.</li>
             </ul>
           </div>
 
+          {/* Test Engineer */}
           <div className="log-entry">
             <div className="log-meta">
               09/2021 <span className="sep">→</span> 07/2022{' '}
@@ -57,12 +58,54 @@ export default function Experience() {
               </span>
             </div>
             <ul className="log-list">
-              <li>Performed functional, exploratory, regression, UI/UX, and compatibility testing across mobile, console, and web applications.</li>
-              <li>Created, maintained, and executed test cases based on feature requirements and test scenarios.</li>
-              <li>Identified and documented functional, UI, and edge-case defects with clear reproduction steps.</li>
-              <li>Reported, tracked, retested, and verified defects using Jira and TestRail.</li>
-              <li>Reviewed requirements for testability and risk areas and collaborated with developers to reproduce and close defects.</li>
+              <li>Executed manual testing across mobile, web, PC and console platforms.</li>
+              <li>Created test cases and reported software defects.</li>
+              <li>Performed regression testing and feature validation.</li>
+              <li>Verified fixes and collaborated with QA teams to maintain product quality.</li>
             </ul>
+          </div>
+        </div>
+
+        {/* Additional Experience Section */}
+        <div style={{ marginTop: '56px' }}>
+          <div className="eyebrow" style={{ color: 'var(--teal)' }}>Part-time Contract</div>
+          <h3 style={{ fontSize: '24px', fontFamily: 'var(--font-display)', fontWeight: 800, color: 'var(--text)', marginBottom: '8px' }}>
+            Additional Experience
+          </h3>
+          <p className="section-sub" style={{ marginBottom: '32px' }}>
+            Structured AI evaluation, model and agent behavior assessment across chat and search platforms.
+          </p>
+
+          <div className="log">
+            <div className="log-entry">
+              <div className="log-meta">
+                10/2026 <span className="sep">→</span> Present{' '}
+                <span className="badge badge-current">Current Role</span>
+                <span className="badge badge-minor" style={{ marginLeft: '8px' }}>Part-time Contract</span>
+              </div>
+              <div className="log-title">AI Product Evaluator</div>
+              <div className="log-company">
+                <span className="company-item">
+                  <Bot size={14} style={{ color: 'var(--teal)' }} /> micro1
+                </span>
+                <span className="sep">·</span>
+                <span className="location-item">
+                  <Sparkles size={14} style={{ color: 'var(--accent)' }} /> Titan Equinox Project
+                </span>
+                <span className="sep">·</span>
+                <span className="location-item">
+                  <Globe size={14} style={{ color: 'var(--pass)' }} /> Remote
+                </span>
+              </div>
+              <ul className="log-list">
+                <li>Evaluate AI chat and search tools under predefined testing scenarios.</li>
+                <li>Execute structured tasks to assess AI model and agent behaviour.</li>
+                <li>Follow detailed evaluation guidelines and instructions.</li>
+                <li>Test platform behaviour, including usage limits and reset procedures.</li>
+                <li>Record observations, anomalies and supporting evidence.</li>
+                <li>Submit evaluation results through assigned project platforms.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
